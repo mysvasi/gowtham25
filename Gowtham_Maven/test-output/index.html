@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Vasantha.Kumar\AppData\Local\Temp\testng-eclipse--1838346224\testng-customsuite.xml</span>
+                    <span>C:\Users\Vasantha.Kumar\AppData\Local\Temp\testng-eclipse--161240370\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,12 +104,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Gowtham_Maven.Gowtham_Maven.TC_Priority" class="method navigator-link" hash-for-method="amethod2">amethod2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="LoginTests.LoginTest" class="method navigator-link" hash-for-method="HRMLogin">HRMLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Gowtham_Maven.Gowtham_Maven.TC_Priority" class="method navigator-link" hash-for-method="method1">method1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="LoginTests.LoginTest" class="method navigator-link" hash-for-method="loginPageTitleTest">loginPageTitleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -127,21 +127,21 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Gowtham_Maven.Gowtham_Maven.TC_Priority</span>
+              <span class="class-name">LoginTests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="amethod2">
-                  </a> <!-- amethod2 -->
-                  <span class="method-name">amethod2</span>
+                  <a name="HRMLogin">
+                  </a> <!-- HRMLogin -->
+                  <span class="method-name">HRMLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="method1">
-                  </a> <!-- method1 -->
-                  <span class="method-name">method1</span>
+                  <a name="loginPageTitleTest">
+                  </a> <!-- loginPageTitleTest -->
+                  <span class="method-name">loginPageTitleTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,7 +149,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Vasantha.Kumar\AppData\Local\Temp\testng-eclipse--1838346224\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Vasantha.Kumar\AppData\Local\Temp\testng-eclipse--161240370\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,7 +158,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Gowtham_Maven.Gowtham_Maven.TC_Priority&quot;/&gt;
+      &lt;class name=&quot;LoginTests.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -200,18 +200,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'method1')
-data.setCell(0, 2, 'Gowtham_Maven.Gowtham_Maven.TC_Priority')
-data.setCell(0, 3, 48);
+data.setCell(0, 1, 'HRMLogin')
+data.setCell(0, 2, 'LoginTests.LoginTest')
+data.setCell(0, 3, 2709);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'amethod2')
-data.setCell(1, 2, 'Gowtham_Maven.Gowtham_Maven.TC_Priority')
-data.setCell(1, 3, 4);
+data.setCell(1, 1, 'loginPageTitleTest')
+data.setCell(1, 2, 'LoginTests.LoginTest')
+data.setCell(1, 3, 22);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 52 ms</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -237,15 +237,31 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Gowtham_Maven.Gowtham_Maven.TC_Priority</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">method1</span>
+              <div class="chronological-class-name">LoginTests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Setup</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">amethod2</span>
-                <span class="method-start">72 ms</span>
+                <span class="method-name">HRMLogin</span>
+                <span class="method-start">11856 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">14574 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Setup</span>
+                <span class="method-start">15054 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginPageTitleTest</span>
+                <span class="method-start">21369 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">21397 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
