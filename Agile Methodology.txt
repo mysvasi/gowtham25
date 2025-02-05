@@ -1,0 +1,210 @@
+Agile Methodology
+---------------------
+Agile project management is based on an incremental, iterative approach. 
+Instead of in-depth planning at the beginning of the project, Agile methodologies are open to changing requirements over time and encourages constant feedback from the end users.The goal of each iteration is to produce a working product.
+
+12 Agile Principles
+1.Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
+2.Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.
+3.Deliver working software frequently, from a couple of weeks to a couple of months, with preference to the shorter timescale.
+4.Business people and developers must work together daily throughout the project.
+5.Build projects around motivated individuals. Give them the environment. and support they need and trust them to get the job done.
+6.The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.
+7.Working software is the primary measure of progress.
+8.Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace
+indefinitely.
+9.Continuous attention to technical excellence and good design enhances agility.
+10.Simplicity -- the art of maximizing the amount of work not done -- is essential
+11.The best architecture, requirements, and designs emerge from self-organizing teams.
+12.At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
+
+Agile Development Cycle
+The phases in the Agile development cycle may not happen in succession; they are flexible and always evolving, with many happening in parallel.
+1.Requirements analysis: Key stakeholders and users meet to identify business requirements that are quantifiable, relevant, and detailed.
+2.Planning: Once an idea is deemed viable, the project team comes together to identify features, prioritize each feature, and assign them to an iteration. 
+3.Design: The design is prepared from the requirements identified and the team considers what the product or solution will look like, deciding on a test strategy or plan to proceed.
+4.Implementation, coding or development: Coding or developing features, and scheduling iterations for deployment.
+5.Testing: Test the code against the requirements to make sure the product is actually solving customer needs. This phase includes unit testing, integration testing, system testing, and acceptance testing.
+6.Deployment: Deliver the product to customers. Once customers start using the product, they may run into new problems that the project team will need to address in future iterations.
+7.Maintenance: The software is maintained to ensure that it continues to meet the customer’s needs and expectations.
+
+
+Top Methodologies Used to Implement Agile
+1. Scrum
+2. Kanban
+3. Scrumban
+4. Extreme Programming (XP)
+5. Lean Software Development
+6. Crystal
+7. Dynamic Systems Development Method (DSDM)
+8. Feature Driven Development (FDD)
+9. Adaptive Software Development (ASD)
+
+Scrum Methodology
+Scrum is a subset of Agile and one of the most popular process frameworks for implementing Agile. It is an iterative development model often used to manage complex software and product development
+
+Fixed-length iterations, called sprints lasting one to two weeks or 3 weeks long, allow the team to ship software on a regular cadence.
+
+10 features - delivery to customer 
+water fall and V Model - 10 feature delivered customer at a time 
+
+
+10 features - 3 months - 4 sprints 4 required
+1 2 3 - iteration 1 or sprint 1 (dev and testing done in 2 weeks and 3 weeks)
+3,4 5 6 - iteration 2 or sprint 2 (dev and testing done in 2 weeks and 3 weeks)
+7,8 - iteration 3 or sprint 3 (dev and testing done in 2 weeks and 3 weeks)
+9,10 - iteration 4 or sprint 4 (dev and testing done in 2 weeks and 3 weeks) - full product delivered
+
+
+Roles in Scrum
+Product Owner: The Scrum Product Owner has the vision of what to build and conveys that to the team. He or she focuses on business and market requirements, prioritizing the work that needs to be done, managing the backlog, providing guidance on which features to ship next, and interacting with the team and other stakeholders to make sure everyone understands the items on the product backlog
+
+•Business Analyst/Scrum Master : Often considered the coach for the team, the Scrum Master helps the team do their best possible work. This means organizing meetings, dealing with roadblocks and challenges, and working with the Product Owner to ensure the product backlog is ready for the next sprint.
+
+•Scrum Team : The Scrum Team is comprised of five to seven members. Unlike traditional development teams, there are not distinct roles like programmer, designer, or tester. Everyone on the project completes the set of work together.
+
+Steps in the Scrum Process/Ceremonies
+
+1.Product backlog : The product backlog is not a list of things to be completed, but rather it is a list of all the desired features for the product.
+Sprint planning: Before each sprint, the Product Owner presents the top items on the backlog in a sprint planning meeting. 
+The team determines the work they can complete during the sprint and moves the work from the product backlog to the sprint backlog.
+
+under sprint 1 (2 weeks )
+1,2,3
+feature 1 (Story sizing using story points) - Dev -1  , QA -1
+feature 2 - Dev 2 , QA 3 
+
+Story points - 2 ,4 6, 7 ,8
+               1,2,3,4,5
+               T-shirt size (S,M,L ,XS,)
+
+feature 3 - 8 (if story points is 8 then this feature split into small features)
+feature 3 (1) - 3 
+feature 3(2) - 3 - sprint 2
+
+Note : Single Feature called as User Story - which contain the Acceptance criteria which is the description of the feature 
+
+2.Backlog refinement/grooming : At the end of each sprint, the team and Product Owner meet to make sure the backlog is ready for the next sprint.
+
+3.Daily Scrum meetings/Stand up : The Daily Scrum is a 15-minute stand-up meeting that happens at the same time and place every day during the sprint.
+
+4.Sprint review meeting : At the end of each sprint, the team presents the work they have completed as a live demo rather than a presentation.
+
+Sprint retrospective meeting: Also at the end of each sprint, the team reflects on how well Scrum is working for them and talks about any changes that need to be made in the next sprint. 
+1.What went well
+2.What went wrong
+3.How to improve that/Feedback
+
+
+Advantages of Scrum
+•Scrum is a highly prescriptive framework with specific roles and ceremonies. While it can be a lot to learn, these rules have a lot of advantages:
+•More transparency and project visibility :With daily stand-up meetings, the whole team knows who is doing what and issues are identified in advance,
+•improving communication and enabling the team to take care of issues right away.
+•Increased team accountability : There is no project manager. Instead, the team collectively decides what work they can complete in each sprint, working together collaboratively, with accountability. 
+•Easy to accommodate changes: With short sprints and constant feedback, it’s easier to accommodate changes.
+•Increased cost savings: Constant communication ensures the team is aware of all issues and changes sooner, helping to lower expenses and increase quality
+
+Disadvantages of Scrum
+•Risk of scope creep :Some Scrum projects can experience scope creep due to a lack of a specific end date, tempting stakeholders to keep requesting additional functionality. 
+•Team requires experience and commitment :The team needs to be familiar with Scrum principles to succeed, as well as needs to commit to the daily meetings and stay on the team for the entire project. 
+•The wrong Scrum Master can ruin everything: The Scrum Master is very different from a project manager. The Scrum Master does not have authority over the team, so he or she must trust the team to complete the work. 
+•Poorly defined tasks can lead to inaccuracies: Project costs and timelines won’t be accurate if tasks are not well defined. If the initial goals are unclear, planning becomes difficult and sprints can take more time than originally estimated.
+
+Tools are used for agile projects. 
+ 1.JIRA and MS Azure Devops (TFS) - Sprint Activities 
+ 2.For Documentation - Confluence for JIRA and Wiki Board for AzureDevops (TFS)
+Testing activities
+ 3.Microsoft Test Management(MTM) for testing activities (Azure devops)
+ 4.Zephyr , TestRail ,X-ray (JIRA)
+
+
+Tools and Artifacts in Scrum
+Scrum board: The Scrum board helps to visualize your sprint backlog and traditionally involves index cards or Post-It notes on a whiteboard. The board is usually divided into three categories: to do, work in progress, and done. The team updates the board by moving tasks (written on cards) through the columns on the board. 
+
+User stories: A user story describes a software feature from the customer’s perspective. It includes the type of user, what they want, and why they want it.
+User Story Format - As a Admin user , I want to login into Application
+
+Burndown chart: A burndown chart represents all outstanding work. The backlog is usually on the vertical axis, with time along the horizontal axis. 
+A burndown chart can warn the team of potential risk and helps to show the impact of decisions.
+
+Timeboxing: A timebox is a set period of time that a team works towards completing a goal. Instead of letting a team work until the goal is reached, the timebox approach stops work when the time limit is reached
+
+Icebox: Any user stories that are recorded but not moved to development are stored in the icebox.
+
+User Stories 
+What are agile user stories?
+A user story is the smallest unit of work in an agile framework. It’s an end goal, not a feature, expressed from the software user’s perspective.
+A user story is an informal, general explanation of a software feature written from the perspective of the end user or customer
+
+Single User Story - many people can work 
+They create their tasks - (Tasks are noting actual work done by team members)
+US 1 - As a Admin user , I want to login into Application    
+     Implementation /Design - Developer name
+    Write tests - QA name - done/close
+    Test execution - QA name - done/close 
+
+User Story in Todo State (New)  ==> Active(Once work started on US)
+Then tasks are assigned to team members to they move task  - In-Progress 
+
+Once task is completed - its moved to Done state
+All the tasks are completed for US - Then US moved to Done/Closed state 
+
+What is DOD (definition of done)?
+Definition of done is a simple list of activities (writing code, coding comments, unit testing, integration testing, release notes, design documents, etc.) that add verifiable/demonstrable value to the product.
+
+EPIC 
+An epic is a large body of work that can be broken down into a number of smaller stories, or sometimes called “Issues” in Jira. 
+Epics often encompass multiple teams, on multiple projects, and can even be tracked on multiple boards.
+
+EPIC - 1 - Login Page Feature (Login page , Forgot password page , Logo , Footer links)
+US1, -- Active - In-Progress - Resolved(Ready for QA) - QA testing - Done(Azure - Closed)
+    defect 1 
+US2,
+US3,
+
+EPIC - 2
+US1..... US.N
+
+Themes(s)
+The theme is an organization goal that drive the creation of epics and initiatives.
+Breaking initiatives into epics helps keep the team’s daily work — expressed in smaller stories — connected to overall business goals.
+
+Epics Derived from Themes
+User stories Derived from Epics
+
+In Azure Devops - EPIC --> Feature --> UserStories
+
+Advantages of Agile
+
+•Change is embraced: With shorter planning cycles, there’s always opportunity to refine and reprioritize the backlog to accommodate changes throughout the project.
+•End-goal can be unknown : Agile is beneficial for projects where the end-goal is not clearly defined. As the project progresses, the goals will become evident and the team can adapt.
+•Faster, high-quality delivery: Breaking down the project into iterations allows the team to focus on high-quality development, testing, and collaboration. Conducting testing during each iteration means that bugs get identified and solved more quickly.
+•Strong team interaction: Agile embraces frequent communication and face-to face interactions. 
+•Customers are heard Customers have many opportunities to see the work being delivered, share their input, and have an impact on the end product.
+•Continuous improvement: Feedback is encouraged from users and team members throughout  the project, so lessons learned are used to improve future iterations.
+
+
+Disadvantages of Agile
+•Planning can be less concrete: Because project managers are often reprioritizing tasks, it’s possible some items scheduled for delivery may not be completed in time. And additional sprints may be added at any time in the project, adding to the overall timeline.
+•Team must be knowledgeable: Agile teams are usually small, so team members must be highly skilled in a variety of areas and understand Agile methodology.
+•Time commitment from developers: Active involvement and collaboration is required throughout the Agile process, which is more time consuming than a traditional approach.
+•Documentation can be neglected : Agile prefers working deliverables over comprehensive documentation. While documentation on its own does not lead to success, teams should find the right balance between documentation and discussion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

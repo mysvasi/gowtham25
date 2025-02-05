@@ -1,0 +1,1797 @@
+Automation Testing 
+-------------------------
+What is “Automated Testing” ?
+Automated Testing is automating the manual testing process currently in use.
+This requires that a formalized “Manual Testing process” currently exists in your company.
+
+Minimally, such a process includes:
+1. Detailed test cases, including predictable “expected results”.(test cases must be
+documented)
+2. A standalone Test Environment, including a Test Database, such that the test
+cases are able to be repeated each time there are modifications made to the
+applications.
+
+If your current testing process does not include the above points, you are never
+going to be able to make any Effective use of an automated test process.
+
+The real use and purpose of automated test tools is to automate regression testing
+
+An “automated test script ” is a program
+Automated Script development, to be effective must be subject to the same rules and
+standards that are applied to software development.
+
+Benefits of Automation Testing
+•Fast
+•Reliable
+•Repeatable
+•Reusable
+•Comprehensive
+•Programmable
+
+Automation Testing Process
+Automation testing process started with three Stages.
+Stage 1
+1. Tool Evaluation
+Stage 2
+2. Analysing the test cases
+3. Preparing Analysis sheet
+4. Estimating Script development time
+5. Sending summary sheet for Approval
+6. Confirmation
+Stage 3
+7. Automation folder Structure Preparing
+8. Preparing Object Repository
+9. Creating re-usable components and functions
+10. Creating scripts and enhancing scripts
+11. Dry run
+12. Final Execution
+13. Peer Execution
+14. Delivery of scripts
+15. Enhancements
+
+Automated Functional Testing Tools
+Open Source                         
+Selenium                                 
+Sikuli                                       
+Cypress                                     
+Playwright (MS)
+WebdriverIO                               
+Ruby                                        
+Watir                                            
+Appium - Mobile app 
+Kotlin Android Studio - mobile app         
+
+Commercial
+QTP/UFT 
+Test Partner
+Test complete
+RFT
+Silk
+Tosca
+Qualitia
+
+
+Tool Evaluation
+Automation tool is evaluated based on below project features:
+•	Multiple Browser Support
+•	Language support
+•	Ease of Use
+•	Multiple Operating Systems
+•	Ajax Support
+•	Web Application support
+•	UI tests
+•	Scripting
+•	Record and play back
+•	Object recognition capability
+•	Customization of recorded code as per our requirements
+•	Synchronization issues
+•	Test Suite Creation
+•	Maintenance of scripts when features modified
+•	Central Object Repository
+•	APIs availability
+•	Database verification
+•	Vendor support
+•	Framework Creation
+•	Tool Performance
+
+
+Selenium - 19-11-2024
+Selenium - Introduction
+--------------------------
+In 2004 invented by Jason Huggins and team originally name is JavaScript Functional Tool (JSFT)
+Open source browser based integration framework (Selenium RC )built originally by Thought Works
+Google, who has been a long time user of Selenium, had a developer named Simon
+Stewart who developed WebDriver. This tool circumvented Selenium’s JavaScript
+sandbox to allow it to communicate with the Browser and Operating System directly
+using native methods
+
+In 2008, Selenium and WebDriver merged technologies and intellectual intelligence
+to provide the best possible test automation framework 100% JavaScript and HTML Web Testing Tool
+
+Selenium official URL for more info - https://www.selenium.dev/
+
+What is Selenium?
+Selenium is a free (open source) automated testing suite for web applications across different browsers and platforms. 
+It is quite similar to HP Quick Test Pro (QTP) only that Selenium focuses on automating web-based applications.
+
+Selenium Components
+Selenium IDE (Integrated Development Environment) - Record & Play back (plugin to chrome and firebox browser)
+Selenium RC- 1.0 – Server /Client (Selenium. Start /Selenium. Stop) - Now not using this 
+Selenium 2.0/3.0/4.0 / - Web Driver /Advanced Selenium
+Selenium Grid – To Execute scripts in Multiple Browsers & Systems
+
+Selenium IDE
+The selenium IDE is the tool used to develop your selenium test cases by using record and play back.
+Installation - Extension/Plugin needs to be installed to Chrome Browser or Firefox browser. 
+Once installed the extension/plugin - IDE icon is added to browser and  Open the selenium IDE on the browser Header - 
+
+Selenium IDE is used for
+Record the test and Play
+IDE Generate code in Command and Target HTML Code
+Exporting into different Languages 
+
+Advantages
+It’s an easy –to-use
+It’s  Browser plug in and is generally the most efficient way to develop test cases
+Very useful tool for beginners
+Browser extension which allows record/Play testing paradigm
+Creates the simplest possible locator based on Selene's
+Look at various possible commands in the dropdown
+Records a test at HTML file
+We can export the test as Java /Ruby etc...
+Disadvantages
+Selenium-IDE does not directly support:
+Condition statements & Iteration or looping
+Logging and reporting of test results
+Error handling, particularly unexpected errors
+Database testing
+Test case dependency
+Capture screenshots on test failures
+Results Report generations
+
+What is WebDriver ?
+Selenium WebDriver refers to both the language bindings and the implementations of the individual browser controlling code. 
+WebDriver is designed as a simple and more concise programming interface.
+WebDriver is a compact object-oriented API.
+It drives the browser effectively.
+
+Architecture of Selenium WebDriver (Selenium 3)
+
+Selenium WebDriver Architecture is made up of four major components:
+Selenium Client library: Selenium provides support to multiple libraries such as Ruby, Python, Java, etc as language bindings
+JSON wire protocol over HTTP: JSON is an acronym for JavaScript Object Notation. It is an open standard that provides a transport mechanism for transferring data between client and server on the web.
+Browser Drivers: Selenium browser drivers are native to each browser, interacting with the browser by establishing a secure connection. Selenium supports different browser drivers such as ChromeDriver, GeckoDriver, Microsoft Edge WebDriver, SafariDriver, and InternetExplorerDriver.
+Browsers: Selenium provides support for multiple browsers like Chrome, Firefox, Safari, Internet Explorer etc.
+
+Architecture of Selenium WebDriver (Selenium 4)
+
+The architecture of Selenium 4 is similar to Selenium 3, however it uses W3C protocol instead of JSON wire protocol for communication between Client Libraries and Browser Drivers.
+It creates open standards and specifications that promote compatibility and consistency across various web technologies and platforms. And when we say Selenium 4 is W3C compliant it states that Selenium adheres to the standards and specifications laid by the W3C for web automation.
+All the browsers and the browser drivers in Selenium architecture follow W3C, except Selenium 3 WebDriver. And hence, JSON Wire Protocol is used to encode and decode the requests and responses. Selenium 4 WebDriver was made W3C compliant to make the communication easy and direct between the client libraries and the browser drivers. Improved communication led to more stability.
+This has also enhanced browser compatibility, performance and efficiency as there is no overhead of HTTP requests and responses for communication between the WebDriver client and the browser driver. Instead, WebDriver now utilises native browser communication channels and protocols.
+
+
+Difference between Architecture of Selenium 3 & Selenium 4
+
+1. Communication between client-server: Selenium 3 architecture uses JSON Wire protocol to transfer information from the client to the server over HTTP. This protocol is used to serialise and deserialize object’s data to JSON format and vice versa respectively. However, Selenium 4 has dropped the JSON Wire protocol to ensure direct communication between client and the server.
+
+2. W3C compliant: Selenium 3 does not fully adhere to W3C guidelines whereas Selenium 4 is fully W3C compliant as it acts in accordance with the W3C standards and guidelines.
+3. Selenium Grid: In Selenium Grid 3, testers are bound to start the hub and node jars every time they need to execute the test automation. On the contrary, in Selenium Grid 4, hub and node jars are packed in a single jar and it is not required for the testers to start it each time they need to execute the automation tests.
+
+4. ChromeDriver: In Selenium 3 class ChromeDriver directly extended RemoteWebDriver class however in Selenium 4 ChromeDriver class extends ChromiumDriver. 
+
+https://javadoc.io/doc/org.seleniumhq.selenium/selenium-edge-driver/3.141.0/index.html
+
+5. Selenium IDE: Selenium IDE is a record and play tool which only supported the Firefox browser in Selenium 3. In Selenium 4, it supports Chrome browser along with Firefox. New Plug-in system, allows any browser to easily plug into the new Selenium IDE with its locator strategy and IDE plugin. It also allows parallel test execution and provides metrics on the total tests executed, as PASS/FAIL status.
+
+6. Relative Locators: Relative Locators newly introduced in Selenium 4 allows locating elements located near to the location of other web elements on the page with the help of methods such as above(), below(), toLeftOf(), toRightOf(), near(). Selenium 3 lacked this feature.
+
+7. ChromeDevTools Protocol (CDP): Selenium 3 has no support for ChromeDevTools Protocol. Selenium 4 supports CDP which provides access to a wide range of advanced browser debugging and automation capabilities. Testers can benefit from features such as DOM inspection, Performance profiling and network traffic analysis. 
+
+Selenium Project Setup
+1.	Java JDK 11.0 (Java 8 Support removed by selenium on September 2023)
+2.	Selenium Package 4.10.0 – which supports the Java Versions(you can download any version)
+https://www.selenium.dev/downloads/
+https://www.selenium.dev/categories/releases/
+download the selenium-java-versions for eg., selenium-java-4.12.0
+3.	Browser Driver for Chrome , Firefox, or Edge -  https://chromedriver.chromium.org/downloads - download the chrome driver same chrome )browser version where chrome driver version is 114 and less that. 
+4.	Where the browser version is more that 114 – download for this link https://googlechromelabs.github.io/chrome-for-testing/#stable
+https://googlechromelabs.github.io/chrome-for-testing/
+lower versions chrome driver download - https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints 
+Firefox Driver/GeckoDriver download – Browser version doesn’t matter which ever newer driver version please use it 
+https://github.com/mozilla/geckodriver/releases
+Edge Browser driver download -based on your edge browser version.
+https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+5.	Eclipse 2021-03 
+6.	TestNG (Later will download it) – which supports the selenium package versions.
+
+
+Selenium–Locators / Object Identification
+What is Locator?
+The locator can be termed as an address that identifies a webelement uniquely within the webpage. Locators are the HTML properties of a web element.
+Examples for webelement in page are like -- Text box ,Button ,Drop Down ,Hyperlink ,Check Box ,Radio Button …etc
+
+Selenium will identify the objects by using below locators
+By Using “ID “
+By Using “Name “
+By Using “Class Name“
+By Using “TagName “
+By Using “LinkText”
+By Using “Partial LinkText”
+By Using “CssSelector “ (Note : Preferred for IE Browser)
+By Using “XPATH “ (Note : Preferred for Any Browser)
+
+ID Locator
+ID locator is the safest and fastest locator to find the location of an element based on the value of “ID” attribute on a web page. It is the most efficient and preferred way to find a web element.
+Synatax - id = @Id -- Mention the ID property details of that object
+Eg: id ="txtLoginName"
+    id="email" / id='email'
+
+HTML Code
+<input name="txtUserName" type="text" class="loginText" tabindex="1" id="txtUserName">
+
+Name Locator
+Name locator is the second safest and fastest locator to locate an element based on the value of “name” attribute on the web page. The name cannot be unique for each element at all times.
+Syntax By Using Name:
+name = @name -- Mention the name property details of that object
+Eg: name = "txtUserName"
+<input name="txtUserName" type="text" class="loginText" tabindex="1"
+id="txtUserName">
+
+ClassName Locator
+Class Name locator finds an element based on the value of “class” attribute on the web page. The general syntax is like this:
+
+Syntax By Class Name:
+class = @classname -- Mention the class name property details of that object
+Eg: class = "loginText"
+<input name="txtUserName" type="text" class="loginText" tabindex="1"
+id="txtUserName">
+
+TagName Locator
+TagName locator is used to finding an element from the group elements like checkboxes, drop-downs, etc. It locates an element by its tag name.
+
+Eg: tagname=<a> -- Mention the tagname details of that object
+tagname=div
+
+<a href="/r.php?locale=en_GB&amp;display=page" rel="nofollow" class="_97w5">Sign up for Facebook</a>
+
+LinkText Locator
+linkText is very useful when you want to interact with hyperlinks. The actual text displayed on the web page for that link is used
+Eg: link = linktextdetails --- Mention the linktext details of that object
+<a href="/r.php?locale=en_GB&amp;display=page" rel="nofollow" class="_97w5">Sign up for Facebook</a>
+
+Partial LinkText Locator
+This locator locates an element by a partial match of its link text and then performs actions on it. It works in the same way as the link text
+Eg: partiallinkText = linktextdetails --- Mention the linktext details partially of that object
+<a href="/r.php?locale=en_GB&amp;display=page" rel="nofollow" class="_97w5">Sign up for Facebook</a>
+
+CSS Selector Locator
+CSS (Cascading Style Sheets) is a language for describing the rendering of HTML and XML documents.
+This locator finds an element by the CSS selector on the web page. CSS selector makes the execution of test  scripts faster as compared to the XPath locator.
+Synatx css="Attributetype#Attributevalue"
+
+XPATH 
+What is Xpath – group of nodes
+XPath stands for XML (Extensible Markup Language) Path language. It is a query language that is used to search and select the node in an XML document. All the major web browsers support XPath
+
+Advantage: It can access almost any element, even those without class, name, or id attributes.
+
+Disadvantage: It is the most complicated method of identifying elements because of too many different rules and considerations.
+
+Different Types of Xpath in SLEENIUM
+1.Absolute Xpath
+2.Relative Xpath
+
+Absolute Xpath
+It is the easiest way to find the element but if any changes are made in the path of the element then this XPath gets failed. So, This is the main disadvantage of absolute XPath.
+
+It begins with a single forward slash (/) which selects the element from the root HTML node
+
+Absolute XPath = /html/body/div/div/form/input
+/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input
+
+Relative XPath
+It starts from the double forward slash(//) and selects the element from anywhere on the webpage.
+It is the best practice to find an element through a relative XPath and helps us to reduce the chance of “element not found exception”.
+With a relative XPath, we can locate an element directly irrespective of its location in the DOM.
+
+1. Xpath with single attribute
+//htmltagname[@attribute Type=‘attribute Value’]
+For Eg., //input[@name='username']
+
+2. Xpath with Multiple attribute
+//htmltagname[@attributeType=‘attributeValue’][@attributeType=‘attributeValue’]
+For E.g., //input[@name='username'][@class='oxd-input oxd-input--active']
+
+3. Xpath with text attribute
+Syntax: //htmltagname[text()=’text details’]
+/For E.g., //input[text()="username"]
+
+4. Xpath with Contains
+contains() can be used to find an element by specifying any partial value of the attribute.
+This function comes handy when attribute value changes dynamically on page reload.
+Syntax: //htmltagname[contains(@attributeType,’ attribute value’)]
+For E.g., //input[contains(@name ,'username')]
+
+5. Xpath with Starts with
+Starts-with() can be used to find an element by specifying a partial value (prefix) of the
+attribute. This function comes handy when attribute value changes dynamically on page reload.
+
+Syntax: //htmltagname[starts-with(@attributeType, ‘attribute value’)]
+For E.g., //input[starts-with(@name ,'username')]
+
+
+Tools for Object Identification in Selenium
+1. Chrome Browser – Inspect Option(Right click on any element and select Inspect)
+2. Firefox–InspectElement(Q)-(Right click on any element and select Inspect
+option),
+3.MSEdge Browser – Inspect Option-  Developer Tools(Click on Tools and select Developer Tools option)
+4.Browser plugin tools are - OSpy , ChroPath , SelectorHub ,Firebug and Firepath
+
+How to verify the xpath in browser itself 
+Press Ctrl + F - Find search bar will be enabled and copy and paste your xpath or any locators 
+if its correct particular Html line code is highlighted with yellow color and element on webpage 
+if its not correct particular Html line code is not highlighted with yellow color and element on webpage 
+
+WebDriver methods:
+get()- get URL
+getTitle() - it returns title of webpage
+getCurrentUrl() - It return current URL 
+getPageSource() - It return page source or source code of loaded page
+findElement() - Finding webElement - only one  - Locating the elements based on the provided locator values.
+findElements() - Finding WebElements - morethan one webelement 
+getWindowHandle() - Finding the window handle or tab
+getWindowHandles() - Finding the window handles or tabs
+switchTo() - helps in switching page or tabs
+manage() - to use of window operation like maximize , minimize and timeouts
+navigate() - To navigate between page like back page , refresh page , forward page
+close() - to close the browser tab - if your using mulitiple tabs - if only tab - its closes the browser 
+quit() - To quit process - to kill the Webdriver/chrome driver process 
+click() - To click on button or checkbox , radio button 
+sendKeys() - To enter the value to text field 
+
+Alert
+What is alert?
+Alert is a small message box which displays on-screen notification to give the user
+some kind of information or ask for permission to perform certain kind of operation.
+It may be also used for warning purpose.
+
+In General There are two types of alerts:
+• Windows-based alert pop-ups
+Selenium can't handle window based alerts. To handle those kind of scenarios need
+to use some third-party tools like Sikuli or Auto-it.
+• Web-based alert pop-ups
+
+Alert is an interface. below are the methods that are used to handle the alerts
+Alert alert = driver.switchTo().alert();
+To Click on OK button. - alert.accept();
+To click on Cancel button - alert.dismiss()
+To get the text which is present on the Alert. - alert.getText();
+To pass the text to the prompt popup - alert.sendkeys();
+
+WaitMethods (or) Synchronization
+It is a mechanism which involves more than one component to work parallel with Each other.
+
+Thread.sleep()
+In this we just specify timeout value only. We will make the script to wait until certain
+amount of time and then proceed further.
+for E.g., Thread.sleep(3000) - 3ms - execution is going to halt for 3ms.
+
+Selenium inbuilt waits are 
+Implicit Wait
+WebDriver waits for an element if they are not immediately available. So, WebDriver does not throw NoSuchElementException immediately. This is known as implicitlyWait()
+Syntax : driver.manage.TimeOuts.implicitwait(10,Timeunit.SECONDS); - Selenium 3
+         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000)); - Selenium 4
+
+Implicit Wait setting is a Global setting and applies to all elements in the script, and it remains in effect for the duration of the WebDriver instance.
+
+Set wait time 3ms - if the page loaded in 1ms - code execution start 
+
+Pageload timeout  
+PageLoadTimeout is a Selenium feature that specifies the maximum time that the WebDriver should wait for the page to render completely before throwing an exception. 
+
+pageloadTimeout - 1 MS - but page is taking more than 1 MS - it will throw the pageloadtimeout exception
+syntax - driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS); - Selenium 3 
+syntax  - driver.manage().timeouts().pageLoadTimeout(Duration.ofMillis(6000)); - selenium 4
+
+Explicit Wait
+Using Explicit Wait, we can tell WebDriver to wait for a certain condition to occur before proceeding further in the execution.
+
+For E.g, Login page - where you need verify the login button(webelement) - wait until 30 ms then it throws the Exception  - NoSuchElementException
+We can use some of the prebuilt ExpectedConditions to wait for elements to become clickable, visible, invisible, etc.
+
+Syntax : 
+WebDriverWait wait = new WebDriverWait(driver, 10);   for Selenium 3 Version 
+wait.until(ExpectedConditions.elementToBeClickable(By.name(“name")));
+
+Syntax :
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2)); for Selenium 4 Version 
+wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
+
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+
+
+Fluent wait 
+Fluent Wait in Selenium marks the maximum amount of time for Selenium WebDriver to wait for a certain condition (web element) becomes visible. It also defines how frequently WebDriver will check if the condition appears before throwing the “ElementNotVisibleException”.
+
+
+To put it simply, Fluent Wait looks for a web element repeatedly at regular intervals until timeout happens or until the object is found.
+
+Syntax - 
+Wait wait = new FluentWait(WebDriver reference)
+.withTimeout(timeout, SECONDS)
+.pollingEvery(timeout, SECONDS)
+.ignoring(Exception.class);
+
+Example code - Selenium 3 
+//Declare and initialise a fluent wait
+FluentWait wait = new FluentWait(driver);
+//Specify the timout of the wait
+wait.withTimeout(5000, TimeUnit.MILLISECONDS);
+//Sepcify polling time
+wait.pollingEvery(250, TimeUnit.MILLISECONDS);
+//Specify what exceptions to ignore
+wait.ignoring(NoSuchElementException.class)
+
+//This is how we specify the condition to wait on.
+wait.until(ExpectedConditions.alertIsPresent());
+
+/Fluent Wait - Selenium 4 syntax
+// Waiting 30 seconds for an element to be present on the page, checking
+   // for its presence once every 5 seconds.
+   Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+       .withTimeout(Duration.ofSeconds(30L))
+       .pollingEvery(Duration.ofSeconds(5L))
+       .ignoring(NoSuchElementException.class);
+
+   WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+     public WebElement apply(WebDriver driver) {
+       return driver.findElement(By.id("foo"));
+     }
+   });
+		
+
+This command operates with two primary parameters: timeout value and polling frequency. The above code defines the time out value as 5 seconds and polling frequency as 0.25 seconds. It directs WebDriver to wait for no more than 5 seconds to verify a specific condition. If the condition occurs during those 5 seconds, it will execute the next step in the test script. If not, it will return “ElementNotVisibleException”.
+
+Ignoring Certain Exceptions:
+Fluent Wait allows you to ignore certain types of exceptions while waiting. This feature is especially useful when dealing with intermittent problems or unexpected behavior that may occur during testing. By overriding certain exceptions, you can make your automation script more reliable and resilient to transient failures.
+
+Keyboard Actions – Robot Class
+Robot Class in Selenium:
+In certain Selenium Automation Tests, there is a need to control keyboard or mouse to interact with OS windows like Download pop-up, Alerts, Print Pop-ups, etc. or native Operation System applications like Notepad, Skype, Calculator, etc.
+
+Java.awt.Robot class is used to take the control of mouse and keyboard. Once you get the control, you can do any type of operation related to mouse and keyboard through your java code. This class is used generally for test automation.
+
+KeyPress(): This method is called when you want to press any key
+KeyRelease(): This method is used to release the pressed key on the keyboard
+
+Advantages of Robot Class
+• Robot Class can simulate Keyboard and Mouse Event
+• Robot class can support webbased application and Windows based application
+• Robot Class can help in upload/download of files when using selenium web driver
+• No need of to identify any object to perform respective action
+• Robot Class can easily be integrated with automation framework
+
+Dropdown Action
+------------------
+DropDown & Multiple Select Operations works together and almost the same way. To perform any action, the first task is to identify the element group.as DropDown /Multiple Select is not a single element. They always have a single name or id but and they contains one or more than one elements in them.
+
+
+Select Class in Selenium
+WebDriver’s support classes called “Select”, which provides useful methods for interacting with select options. User can perform operations on a select dropdown and also de-select operation using the below methods.
+
+import org.openqa.selenium.support.ui.Select;
+
+Syntax
+Select select = new Select(WebElement or driver.findElement(By.id(“dropdownid"))
+
+Method Name: selectByVisibleText
+Method Name: selectByIndex
+Method Name: selectByValue
+
+Navigate methods 
+----------------
+1.navigate().back()
+To move back a single "item" in the web browser's history. And it will not perform any action if you are on the first page viewed.
+
+2.navigate().forword()
+To move a single "item" forward in the web browser's history. And it will not perform any action if we are on the latest page viewed.
+
+3.navigate().to(url)
+This methods Load a new web page in the current browser window. This is done using an HTTP GET operation, and the method will block until the load is complete. URL – It should be a fully qualified URL.
+
+4.navigate().refresh()
+It refreshes the current web page
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TC_NavigateMethods {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver(); // Driver initialization
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.navigate().to("https://selenium08.blogspot.com/2019/11/dropdown.html");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.findElement(By.xpath("//div[@class='header-widget']//div//a[contains(text(),'Selenium')]")).click();
+        driver.navigate().refresh();
+        driver.navigate().back();
+        Thread.sleep(2000);
+        driver.navigate().forward();
+        Thread.sleep(3000);
+        driver.navigate().to("https://www.google.com/");
+       // driver.quit();
+
+	}
+
+}
+
+
+Checkbox
+check box on/off is also done using the click() method
+
+Switch to method
+-----------------
+Use the SwitchTo command to switch to the desired window and also pass the URL of the web page.
+
+Syntax -
+         driver.switchto().alert()
+         driver.switchto().window()
+         driver.switchto().frame()
+
+
+
+Windows Handlers
+----------------------
+Get Window Handles. The Get Window Handles command of the WebDriver API returns a list of all WebWindow
+Each tab or window, depending on whether you are using a tabbed browser, is associated by a window handle that is used as a reference when switching to the window
+
+Method Name : driver.getWindowHandle()
+              driver.getWindowHandles()
+
+
+Iframe
+--------
+What is Iframe?
+A web page which is embedded in another web page or an HTML document embedded inside another HTML document is known as a frame.
+
+The IFrame is often used to insert content from another source, such as an advertisement, into a Web page. The <iframe> tag specifies an inline frame.
+
+How to identify the frame ?
+Perform inspect Element and Search with the ‘frame’/ 'iframe', if you can find any tag name with the ‘frame’/ 'iframe' then it is meaning to say the page consisting an frame/ iframe.
+
+Methods to handle frames
+To Enter – driver.switchTo().frame(“framename/frameid/index”)
+To Exit - driver.switchTo().defaultContent()
+
+
+Actions class 
+Actions in  Selenium is a class that allows us to make a sequence of actions that we would like to perform. For example, Press shift button, type something and then release,double-click, right-click, moving a mouse, drag & drop, etc.
+
+Action in Selenium is an interface that provides us two methods: perform() and build(). These two methods or commands of action interface are implemented by the actions class
+
+build() Method
+The build() method of action interface generates a composite action that contains all the actions gathered which are ready to be performed
+
+perform()
+This method is used to perform a sequence of actions without calling build() first.
+
+Syntax
+Actions actions = new Actions( WebDriver driver);
+
+Mouse Over Actions in WebDriver
+What is Mouse Hover Actions?
+A mouse hover is also called as hover. Mouse hover action is basically an action where a user places a mouse over a designated area like a hyperlink. It can cause some event to get triggered.
+
+For Example, moving the mouse over an element on web page displays some popup windows or maybe description boxes.
+To perform mouseover, first we identify the element to be hovered in the web page
+and then we perform the action of movetoelement using Actions class provided in WebDriver
+
+/Mousehover using moveToElement method
+Actions action = new Actions(driver);
+action.moveToElement(WebElement).perform();
+		
+//Scrolling				
+action.scrollToElement(WebElement).perform();
+action.scrollByAmount(0, 600).perform();
+
+//Drag and Drop
+ action.dragAndDrop(source, target).perform();
+ action.dragAndDropBy(source, Intoffest, Intoffset).perform();
+
+
+JavaScript Executer
+----------------------
+JavascriptExecutor interface is a part of org.openqa.selenium and implements
+java.lang.Object class. JavascriptExecutor presents the capabilities to execute JavaScript directly within the web-browser.
+
+
+Two Methods are provided 
+1.ExecuteScript (String script, args)
+As the method name suggests, it executes the JavaScript within the current window,
+alert, frame etc (the window that the WebDriver instance is currently focusing on)
+
+2.ExecuteAsyncScript (String script, args)
+As the method name suggests, it executes the JavaScript within the current window,
+alert, frame etc (the window that the WebDriver instance is currently focusing on)
+The parameters and import statement are common to both the executor methods.
+
+Why use JavascriptExecutor in Selenium?
+Sometimes, Selenium WebDriver alone will not be able to perform certain operations or interact with web elements. In that case, JavaScript is needed to make sure those actions are being performed accurately. 
+
+JavaScript Executors
+While automating a test scenario, there are certain actions those become an inherent part of test scripts.
+These actions may be:
+• Clicking a button, hyperlink etc.
+• Typing in a text box
+• Scrolling Vertically or Horizontally until the desired object is brought into view And many more
+
+To be able to use JavascriptExecutors in our test scripts, we need to import the package
+using the following syntax:
+import org.openqa.selenium.JavascriptExecutor;
+
+
+#1) clicking a web element
+/ Locating the web element using id
+WebElement element = driver.findElement (By.id ("id of the webelement"));
+
+// Instantiating JavascriptExecutor
+JavascriptExecutor js = (JavascriptExecutor) driver;
+
+// clicking the web element
+js.executeScript ("arguments [0].click ();", element);
+
+#2) Typing in a Text Box
+//Instantiating JavascriptExecutor
+JavascriptExecutor js = (JavascriptExecutor) driver;
+
+// Typing the test data into Textbox
+js.executeScript("arguments[0].value='actualvaluetenterintofield'",WebElement);
+
+
+#3) Scrolling down until the web element is in the view
+WebElement element=driver.findElement(By.xpath("//input[contains(@value,'Save')]"));
+
+// Instantiating the javascriptExecutor and scrolling into the view in the single test step
+((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",element);
+
+TakeScreenshot
+---------------
+ To take a screenshot in Selenium, we use an interface called TakesScreenshot, which enables the Selenium WebDriver to capture a screenshot and store it in different ways. It has a got a method "getScreenshotAs() " which captures the screenshot and store it in the specified location.
+
+
+Reasons for taking screenshot.
+1.When application issues occur
+2.When an assertion failure occurs.
+3.Also, when there is some difficulty in finding a web element on a page.- execeptions
+4.Where there is a Timeout in finding a web element on a web page - execeptions
+5.Taking screenshot for Failure/Pass test scenarios 
+
+Syntax 1
+1. Since TakesScreenshot is an interface. So, we cannot create an object directly. We will have to convert the web driver object to TakesScreenshot.
+The syntax to convert the WebDriver object to TakesScreenshot is given below:
+TakesScreenshot scrShot = ((TakesScreenshot)webdriver);
+
+2. Now we will call getScreenshotAs() method to create an image file which is provided by the TakesScreenshot interface to capture the screenshot of the web page displayed in the driver object.
+File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
+
+3. In the last step, save the file object returned by getScreenshotAs() method using copyFile() method of the FileUtils class. The syntax is given below:
+FileUtils.copyFile(SrcFile, DestFile);
+
+Syntax 2
+File f1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+File f2 = new File("C:\\selenium\\screesnhot\\screenshot.jpg");
+Files.copy(f1, f2);
+
+Syntax 3
+// Take screenshot and store as a file format
+File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+// now copy the screenshot to desired location using copyFile //method
+FileUtils.copyFile(src, new File("c:\\selenium\\google.png"));
+
+Explain the difference between findElement and findElements in Selenium 
+𝐟𝐢𝐧𝐝𝐄𝐥𝐞𝐦𝐞𝐧𝐭:
+Returns a single WebElement matching the specified locator strategy (ID, Name, XPath).
+Used to locate the first occurrence of an element on the webpage.
+Facilitates interaction with the first identified element.
+Ideal for scenarios where only one element needs to be accessed or manipulated.
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐔𝐬𝐚𝐠𝐞:
+𝐟𝐢𝐧𝐝𝐄𝐥𝐞𝐦𝐞𝐧𝐭: WebElement usernameField = driver.findElement(By.id("username"));
+
+𝐟𝐢𝐧𝐝𝐄𝐥𝐞𝐦𝐞𝐧𝐭𝐬:
+Returns a List<WebElement> containing all elements that match the specified locator strategy.
+Used to locate all occurrences of elements on the webpage.
+Enables handling and interaction with multiple identified elements.
+Suitable for scenarios where there are multiple elements with similar properties (e.g., multiple links, buttons, Static widget/Card data ).
+
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞 𝐔𝐬𝐚𝐠𝐞:
+List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+
+How to automate WebTable/Table 
+public class TC_WebTable {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.get("https://www.w3schools.com/html/html_tables.asp");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
+
+		// Row Count Details
+		int row = driver.findElements(By.xpath("//table[@id='customers']/tbody/tr")).size();
+		System.out.println("Number of Rows = " + row);
+		int rowcol = driver.findElements(By.xpath("//table[@id='customers']/tbody/tr/td")).size();
+		System.out.println("Number of Rowscolumns = " + rowcol);
+
+		// To get Data from particular Cell
+		String rowData = driver.findElement(By.xpath("//table[@id='customers']/tbody/tr[4]/td[1]")).getText();
+		System.out.println("Data of Row = " + rowData);
+
+		for (int i = 2; i <= row; i++) {
+			for (int j = 1; j <= rowcol; j++) {
+				String data = driver.findElement(By.xpath("//table[@id='customers']/tbody/tr[" + i + "]/td[" + j + "]"))
+						.getText();
+				System.out.println("All Data in Rows = " + data + "\n");
+				if (j == 3) {
+					j = 1;
+					break;
+				}
+			}
+
+		}
+
+		driver.quit();
+	}
+
+}
+
+
+Reading the data/TestData from external files like property , CSV and Excel.
+
+Reading the data from config.properties file 
+
+Format of the data in property file (Key Value Pair of data) 
+url = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+username = Admin
+password = admin123
+submit.xpath = //button[@type='submit']
+username.Name="username"
+password.Id="password"
+username.xpath=//input[@placeholder='Username']
+
+public class TC_ReadPropertyFile {
+
+	public static void main(String[] args) throws IOException {
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver\\chromedriver.exe");
+		//File reader
+		FileReader file = new FileReader("D:\\Training\\Gowtham_sel\\src\\config.properties");
+		//Property object with method load
+		Properties props = new Properties();
+		props.load(file);
+		WebDriver driver = new ChromeDriver();
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.get(props.getProperty("url"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(props.getProperty("username"));
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(props.getProperty("password"));
+		driver.findElement(By.xpath(props.getProperty("submit.xpath"))).click();
+        driver.quit();
+	}
+
+}
+
+
+
+Read a data from Excel/CSV file 
+1.Apache POI Package with + Apache Commons Jar package
+2.JXL Package 
+
+Apache POI setup
+
+1.	Download the Apache POI Package - https://archive.apache.org/dist/poi/release/bin/
+2.	which ever the version you want - better download latest version 
+3.	Then exract from zipfolder 
+4.	Goto your selenium project - added Apache POI Package into Build Path
+
+
+public class TC_ReadFromExcel {
+
+	public static void main(String[] args) throws IOException {
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver\\chromedriver.exe");
+		FileInputStream fis = new FileInputStream("C:\\selenium\\test.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("Sheet2");
+		System.out.println(sheet.getSheetName());
+		System.out.println("LastRows" + sheet.getLastRowNum());
+		if (sheet.getLastRowNum()!= -1) {
+			System.out.println("Test Data found");
+			XSSFCell username = sheet.getRow(1).getCell(0);
+			String un = username.toString();
+			XSSFCell password = sheet.getRow(1).getCell(1);
+			String pwd = password.toString();
+			System.out.println(username);
+			System.out.println(password);
+			WebDriver driver = new ChromeDriver();
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			driver.get("https://opensource-demo.orangehrmlive.com/");			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
+			driver.findElement(By.xpath("//input[@name='username']")).sendKeys(un);
+			driver.findElement(By.xpath("//input[@name='password']")).sendKeys(pwd);
+	        driver.findElement(By.xpath("//button[@type='submit']")).click();
+	        driver.quit();
+		} else {
+			System.out.println("No Test Data foound");
+			System.exit(0);
+		}
+		
+		workbook.close();
+		
+
+	}
+
+}
+
+
+Handling of the Browser versions
+------------------------------
+Reasons to handling this
+1. Version mismatch between the chromedriver and chrome browser (same for other browser)
+
+To reslove this probelm
+1.Download lastest the browser driver - which is match to browser version
+2.Webdriver manager (thrid party API) we can use - it handles to automatically
+3.Selenium Manager comes with selenuim 4(In built) version so it can run the test through loading the installed browser on your system 
+
+
+Download the webdriver manager 
+https://github.com/bonigarcia/webdrivermanager
+https://github.com/bonigarcia/webdrivermanager/releases/tag/webdrivermanager-5.9.2
+Download the Jar file 
+Add the Jar file into Project Build path
+
+Webdriver manager methods 
+WebDriverManager.chromedriver().setup();
+WebDriverManager.firefoxdriver().setup();
+WebDriverManager.edgedriver().setup();
+
+WebDriverManager.chromedriver().browserVersion("129.0.6668.70");
+
+3.Selenium Manager 
+To use this feature in selenium 4 , Just declare the Driver initialization line
+WebDriver driver = new ChromeDriver(); 
+WebDriver driver = new FirefoxDriver()
+
+No need to use the system.setproperty for driver path 
+
+
+Selenium Exception
+------------------
+What are Selenium exceptions?
+An exception is known as an unusual or unprecedented event that occurs during the execution of a software program or application. It is a runtime error of an unexpected result or event which influence and disrupt usual program flow. An exception is also considered as a fault.
+
+
+Classification of Selenium exceptions
+Selenium exceptions are divided into two types including Checked Exceptions and Unchecked Exceptions.
+
+1. Checked Exceptions
+Checked Exceptions are handled during the process of writing codes. These exceptions are handled before compiling the code, therefore, such exceptions are examined at the compile time.
+
+2. Unchecked Exceptions
+These exceptions are thrown at runtime. Unchecked exceptions are more catastrophic than the compile-time exception as it causes problems while running Automation pack in headless.
+
+1.ElementNotSelectableException: This exception belongs to InvalidElementStateException class. This exception occurs when the web element is present on the web page but cannot be selected.
+
+Solution:
+o	Try for other interfaces to select the element (selectByIndex, selectByVisibleText).
+o	A wait command can also be added to wait until the element becomes clickable.
+
+2.ElementNotInteractableException: This exception is thrown when an element is present in DOM, but it is not interactable, like unable to perform any action on it such as clicking or sending keys. This happens probably when the element to be interacted with is either hidden or disabled.
+
+Solution:
+o	Wait until the element is visible or clickable using Explicit wait.
+o	Scroll until the element gets in display using the Actions class.
+o	Use JS Executor to interact directly with the DOM.
+
+
+3.ElementNotVisibleException: Selenium throws ElementNotVisibleException when an element is present in the DOM, but it is not visible to the user.
+Solution:
+o	Try to write unique locators that match with a single element only.
+o	Wait until the element is visible or clickable using explicit wait.
+
+4.NoSuchElementException: This is the most common Selenium exception which is a subclass of NotFoundException class and thrown by findElement() method of Selenium WebDriver. This exception occurs when the locators defined in the Selenium program is unable to locate the element in the DOM
+
+Solution:
+o	Reverify the locator by inspecting the browser and checking whether the element is present on DOM or not. Try switching to more reliable locators.
+o	Wait for the element to load using explicit wait.
+
+
+5.NoSuchFrameException: This exception occurs when Selenium is unable to locate the desired frame or iframe using the specified iframe identifier (By iframe id, name or index). Iframe is a web page inside a web page and to work with the iframe elements, we need to first switch to the desired iframe. This exception triggers when Selenium is unable to find the iframe or if it is switching to an invalid iframe.
+Solution:
+o	Use wait after the action which triggers to open the iframe to ensure the iframe is loaded properly.
+o	Ensure the iframe locator is correct. (Switch between iframe name, id or index and recheck)
+
+
+6.NoAlertPresentException: This exception occurs when Selenium tries to switch to an alert box which is not available on the web page which means the driver is switching to an invalid or non-existing Alert pop up. Like iframe, the driver first needs to switch to the desired Alert box to interact with it and then perform actions on it such as clicking on OK/ Submit/ Cancel button or fetching Alert message.
+
+Solutions:
+o	Use wait after the action which triggers to open the Alert to ensure it is loaded properly before interacting.
+o	Ensure alert locator is correct and visible on DOM by inspected browser. Try with different alert locators.
+
+
+7.NoSuchWindowException: Selenium throws this exception when the WebDriver cannot find the desired browser window or tab using the specified window handle or name. This may occur when the window browser or tab we are attempting to work with is either not present, has been closed during the execution or is not completely loaded.
+Solutions:
+o	Ensure that the window handle or name being used is accurate.
+o	Wait for the browser window or tab to completely load and then switch the WebDriver to the desired window instance.
+
+
+8.StaleElementReferenceException: This exception pops up when the element that was referenced by the locator is no longer present in the DOM or has become stale. It is a runtime exception that occurs when the page gets dynamically loaded, deleting the referenced element completely from the DOM, so that it becomes stale
+
+Solutions:
+o	Refresh the page before accessing the element that causes StaleElementException.
+o	Use try-catch block to handle the exception and attempt to locate the element again in the catch block.
+
+
+
+9.SessionNotFoundException: SessionNotFoundException will occur when the Webdriver is trying to perform actions on the web application after the browser is closed or when the browser session is not available.
+
+Solution: 
+o To handle such exceptions, we need to revisit our code and check if the code is not accidentally closing the browser. We need to make sure that the browser remains active throughout the execution and should be closed only at the end of the execution.
+
+
+10.TimeoutException: In Selenium, TimeOutException occurs when a command takes longer than the wait time to avoid the ElementNotVisible Exception. Due to certain environment conditions such as low internet speed or web application taking more time than usual to completely load, the element to be interacted with does not load. And in such conditions when the WebDriver tries to find the element on the  webpage, TimeoutException occurs.
+Solutions:
+o	Check the load time of the web element manually and add wait accordingly.
+o	Add explicit wait using JavaScript executor until the page is loaded.
+o	Try using some other property to locate the element such as CSS Selector or Xpath.
+
+11.WebDriverException: This exception occurs when the WebDriver is acting immediately after closing the driver session. 
+
+Solution: Use driver.close()/drier.quit()  after the completion of all tests at the suite level and not at the test level. If using TestNG, use driver.close() in @AfterSuite and not in @AfterTest.
+
+
+TestNG
+----------
+TestNG is a testing framework that overcomes the limitations of another popular testing framework called JUnit. The "NG" means "Next Generation".  Most Selenium users use this more than JUnit because of its advantages. There are so many features of TestNG, but we will only focus on the most important ones that we can use in selenium
+
+
+The main advantage of testNG can be listed as follows:
+•	TestNG provides parallel execution of test methods
+•	It allows to define dependency of one test method over other method
+•	It allows to assign priority to test methods
+•	It allows grouping of test methods into test groups
+•	It has support for parameterizing test cases using @Parameters annotation
+•	It allows data driven testing using @DataProvider annotation
+•	It has different assertions that helps in checking the expected and actual results
+•	Detailed (HTML) reports
+
+TestNG Setup
+1.	Open the Eclipse , Click on Help Menu 
+2.	Click on Eclipse Marketplace  – at Eclipse Marketplace pop dialog – search for TestNG (Internet required to search)
+3.	Once TestNG is listed and click on Install 
+4.	After TestNG installed successfully and TestNG menu enabled 
+5.	Right click on your project and see the TestNG Menu 
+6.	From TestNG menu create the TestNG Class files 
+
+
+What is Annotations ?
+Annotations in TestNG are lines of code that can control how the method below them will be executed. They are always preceded by the @ symbol.
+For E.g., @Test ,@Before, @After etc...
+
+Writing a test is typically a three-step process:
+1.Write the business logic of your test and insert TestNG annotations in your code.
+2.Add the information about your test (e.g. the class name, the groups you wish to run, etc...) in a testng.xml file
+3.Run TestNG
+
+List of TestNG Annotations
+@BeforeSuite: The annotated method will be run before all tests in this suite have run
+@AfterSuite: The annotated method will be run after all tests in this suite have run.
+
+@BeforeTest: The annotated method will be run before any test method belonging to the classes inside the <test> tag is run
+@AfterTest: The annotated method will be run after all the test methods belonging to the classes inside the <test> tag have run.
+
+@BeforeGroups: The list of groups that this configuration method will run before. This method is guaranteed to run shortly before the first test method that belongs to any of these groups is invoked.
+@AfterGroups: The list of groups that this configuration method will run after. This method is guaranteed to run shortly after the last test method that belongs to any of these groups is invoked.
+
+@BeforeClass: The annotated method will be run before the first test method in the current class is invoked/Run.
+@AfterClass: The annotated method will be run after all the test methods in the current class have been run.
+
+@BeforeMethod: The annotated method will be run before each test method.
+@AfterMethod: The annotated method will be run after each test method.
+
+@Test Marks a class or a method as part of the test.(it will as consider as testcase)
+
+
+Parameters goes with Annotations.
+---------------------------------
+1.alwaysRun = True /False
+For before methods (beforeSuite, beforeTest, beforeTestClass and beforeTestMethod, but not beforeGroups): 
+If set to true, this configuration method will be run regardless of what groups it belongs to.For after methods (afterSuite, afterClass, ...): 
+If set to true, this configuration method will be run even if one or more methods invoked previously failed or was skipped.
+
+For e.g., @beforemethod (awlaysRun = true)
+
+2.dependsOnGroups - The list of groups this method depends on.
+
+3.dependsOnMethods - The list of methods this method depends on.
+@Test(dependsOnMethods = {"initialize"})  - This is only applicable to test annotation
+
+4.enabled(true/false) - Whether methods on this class/method are enabled.
+For e.g., @Test (enabled = true)
+          @Test (enabled = false)
+
+5.groups - The list of groups this class/method belongs to.
+For e.g., @Test (groups = "smoke")
+
+6.@DataProvider 
+Marks a method as supplying data for a test method. This annotated method must return an Object[][] where each Object[] can be assigned the parameter list of the test method. The @Test method that wants to receive data from this DataProvider needs to use a dataProvider name equals to the name of this annotation.
+
+TestNG provides an annotation called a @DataProvider to use the DataProvider feature in our tests. This annotation is declared with a method in our test class which can then be called on test methods.
+
+Syntax:
+        @Test(dataProvider = "myTestData")
+        public void methodName(parameters)
+        {
+           . . . . . . . . . . .
+        }
+
+How to Call DataProvider from another Class?
+To put the DataProvider method in another class, we will have to make data provider as static. In addition to this, In the Test method, we will need to add one more attribute dataProviderClass in @Test annotation.
+
+Syntax
+@Test(dataProvider = "getData", dataProviderClass = DataProviderClass.class) 
+public void loginMethod(String data) 
+{ 
+    driver.findElement(By.xpath("*//input[@id='text']")).sendKeys(data); 
+ } 
+
+
+7.name - The name of this data provider. If it's not supplied, the name of this data provider will automatically be set to the name of the method.
+
+8.Parallel - If set to true, tests generated using this data provider are run in parallel. Default value is false.
+
+9.description - The description for this method.
+ @Test (description = "Login Test")
+
+10.invocationCount - The number of times this method should be invoked.
+ @Test (invocationCount = 5)
+
+11 priority - The priority for this test method. Lower priorities will be scheduled first. For E.g., @Test (priority = 1)
+
+12 Parallel Execution: Running the testcases with multiple browsers using WebDriver with TestNG\
+
+
+TestNG Grouping
+TestNG Groups is one of the most popular features supported by TestNG which is not available in the JUnit framework. TestNG framework allows us to perform groupings of test methods.
+
+Using TestNG, we can declare a set of test methods in a particular named group, or multiple groups and run multiple groups of tests at different times or in different places.
+
+This feature provides us maximum flexibility in dividing tests and doesn’t require us to recompile anything if you want to run two different sets of tests back to back.
+
+We can add a method or an entire class to a group by using groups parameter in the @Test annotation.
+
+@Test(groups = {"GroupName"})
+
+For example:
+   @Test(groups = {"Chemistry"})
+   public void atom()
+   {
+       . . . . . . . .
+    }
+   @Test(groups = {"Chemistry"})
+   public void electron()
+   {
+      . . . . . . . . 
+   }
+
+Running TestNG Group through Eclipse
+TestNG plugin provides multiple options to run test classes. They are as follows.
+
+1. Class: Using this option, we can run only a particular test class by a class name with the package.
+2. Method: This option provides us to run only a specific method in a test class.
+3. Groups: Using this option, we can run specific test methods belonging to a particular TestNG group.
+4. Package: In case, we would want to run all the tests inside a package, we can select this option.
+5. Suite: If we have suite files in the form of a testng.xml file, we can select it for execution.
+
+Ignoring tests
+TestNG lets you ignore all the @Test methods :
+In a class (or)
+In a particular package (or)
+In a package and all of its child packages
+using the new annotation @Ignore.
+
+When used at the method level @Ignore annotation is functionally equivalent to @Test(enabled=false). Here's a sample that shows how to ignore all tests within a class.
+
+
+@Ignore
+public class TestcaseSample {
+ 
+    @Test
+    public void testMethod1() {
+    }
+ 
+    @Test
+    public void testMethod2() {
+    }
+}
+
+The @Ignore annotation has a higher priority than individual @Test method annotations. When @Ignore is placed on a class, all the tests in that class will be disabled.
+
+TestNG XML
+--------------
+The testng.xml file has the numerous uses as listed below –
+
+•	Test cases are executed in groups.
+•	Test methods can be included or excluded in the execution.
+•	The execution of multiple test cases from multiple java class files can be triggered.
+•	Comprises names of the folder, class, method.
+•	Capable of triggering parallel execution.
+•	Test methods belonging to groups can be included or excluded in the execution.
+
+TestNG XML format 
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" > 
+<suite name="Suite1" verbose="1" >
+  <test name="Regression1"   >
+    <packages>
+      <package name="test.sample" />
+   </packages>
+ </test>
+</suite>
+
+DTD stands for Document Type Definition. 
+The verbosity level is 0 to 10, where 10 is most detailed.
+Once you set it to 10, you’ll see that console output will contain information regarding the tests, methods, and listeners, etc
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >  
+<suite name="Suite1" verbose="1" >
+  <test name="Nopackage" >
+    <classes>
+       <class name="TC_TestNG" />
+    </classes>
+  </test>
+  <test name="Regression1">
+    <classes>
+      <class name="test.sample.ParameterSample"/>
+      <class name="test.sample.ParameterTest"/>
+    </classes>
+  </test>
+</suite>
+
+
+You can invoke TestNG in several different ways:
+•With a testng.xml file
+•With ant/maven (Build tool)
+•From the command line
+Using Jenkins/Azure CI/CD tool
+
+By default, TestNG will run your tests in the order they are found in the XML file. If you want the classes and methods listed in this file to be run in an unpredictable order, set the preserve-order attribute to false otherwise set preserve-order attribute to true to maintain order
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >  
+<suite name="Suite1" verbose="1" >
+<test name="Regression1" preserve-order="false">
+  <classes>
+    <class name="test.Test1">
+    <class name="test.Test2" >
+    <class name="test.Test3" />
+  </classes>
+</test>
+
+TestNG Groups with XML
+-----------------------
+public class Test1 {
+  @Test(groups = { "functest", "checkintest" })
+  public void testMethod1() {
+  }
+ 
+  @Test(groups = {"functest", "checkintest"} )
+  public void testMethod2() {
+  }
+ 
+  @Test(groups = { "functest" })
+  public void testMethod3() {
+  }
+}
+
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >  
+<suite name="Suite1" verbose="1" >
+<test name="Test1">
+  <groups>
+    <run>
+      <include name="functest"/>
+    </run>
+  </groups>
+  <classes>
+    <class name="example1.Test1"/>
+  </classes>
+</test>
+
+Groups of groups
+--------------------
+Groups can also include other groups. These groups are called "MetaGroups".  For example, you might want to define a group "all" that includes "checkintest" and "functest".  "functest" itself will contain the groups "windows" and "linux" while "checkintest will only contain "windows".  Here is how you would define this in your property file:
+
+@Test
+public class Test1 {
+  @Test(groups = { "windows.checkintest" })
+  public void testWindowsOnly() {
+  }
+
+  @Test(groups = {"linux.checkintest"} )
+  public void testLinuxOnly() {
+  }
+
+  @Test(groups = { "windows.functest" } )
+  public void testWindowsToo() {
+  }
+}
+
+<test name="Regression1">
+  <groups>
+    <define name="functest">
+      <include name="windows"/>
+      <include name="linux"/>
+    </define>  
+    <define name="all">
+      <include name="functest"/>
+      <include name="checkintest"/>
+    </define>  
+    <run>
+      <include name="all"/>
+    </run>
+  </groups>  
+  <classes>
+    <class name="test.sample.Test1"/>
+  </classes>
+</test>
+
+or 
+--
+<test name="Test1">
+  <groups>
+    <run>
+      <include name="windows.*"/>
+    </run>
+  </groups>
+  <classes>
+    <class name="example1.Test1"/>
+  </classes>
+</test>
+
+Exclusion groups
+----------------------
+<test name="Simple example">
+  <groups>
+    <run>
+      <include name="checkintest"/>
+      <exclude name="broken"/>
+    </run>
+  </groups> 
+  <classes>
+    <class name="example1.Test1"/>
+  </classes>
+</test>
+
+Parameter annotation
+-----------------------
+TestNG allows you to pass an arbitrary number of parameters to each of your tests using the `@Parameters` annotation.
+
+here are three ways to set these parameters
+The testng.xml file
+Programmatically - using sendkeys 
+Java system properties
+
+If you are using simple values for your parameters, you can specify them in your testng.xml:
+@Parameters({ "first-name" })
+@Test
+public void testSingleString(String firstName) {
+  System.out.println("Invoked testString " + firstName);
+}
+
+
+In this code, we specify that the parameter firstName of your Java method should receive the value of the XML parameter called first-name.  This XML parameter is defined in testng.xml:
+<suite name="My suite">
+  <parameter name="first-name"  value="Cedric"/>
+  <test name="Simple example">
+  <-- ... -->
+
+The @Parameters annotation can be placed at the following locations:
+Parameters are scoped. In testng.xml, you can declare them either under:
+<suite> tag or
+<test> tag or
+<class> tag or
+<methods> tag.
+
+
+Parameters with DataProviders
+Specifying parameters in testng.xml might not be sufficient if you need to pass complex parameters, or parameters that need to be created from Java (complex objects, objects read from a property file or a database, etc...). In this case, you can use a Data Provider to supply the values you need to test.  A Data Provider is a method on your class that returns an array of array of objects.  This method is annotated with @DataProvider:
+
+This method will provide data to any test method that declares that its Data Provider is named "test1"
+@DataProvider(name = "test1")
+public Object[][] createData1() {
+ return new Object[][] {
+   { "Cedric", new Integer(36) },
+   { "Anne", new Integer(37)},
+ };
+}
+ 
+//This test method declares that its data should be supplied by the Data Provider named "test1"
+@Test(dataProvider = "test1")
+public void verifyData1(String n1, Integer n2) {
+ System.out.println(n1 + " " + n2);
+}
+
+will print
+Cedric 36
+Anne 37
+
+Parallel tests, classes and methods
+The parallel attribute on the <suite> tag can take one of following values:
+<suite name="My suite" parallel="methods" thread-count="5">
+<suite name="My suite" parallel="tests" thread-count="5">
+<suite name="My suite" parallel="classes" thread-count="5">
+<suite name="My suite" parallel="instances" thread-count="5">
+
+parallel="methods": TestNG will run all your test methods in separate threads. Dependent methods will also run in separate threads but they will respect the order that you specified.
+
+parallel="tests": TestNG will run all the methods in the same <test> tag in the same thread, but each <test> tag will be in a separate thread. This allows you to group all your classes that are not thread safe in the same <test> and guarantee they will all run in the same thread while taking advantage of TestNG using as many threads as possible to run your tests.
+
+parallel="classes": TestNG will run all the methods in the same class in the same thread, but each class will be run in a separate thread.
+
+parallel="instances": TestNG will run all the methods in the same instance in the same thread, but two methods on two different instances will be running in different threads. Additionally, the attribute thread-count allows you to specify how many threads should be allocated for this execution.
+
+Rerunning failed tests
+Every time tests fail in a suite, TestNG creates a file called testng-failed.xml in the output directory. This XML file contains the necessary information to rerun only these methods that failed, allowing you to quickly reproduce the failures without having to run the entirety of your tests.  Therefore, a typical session would look like this:
+
+java -classpath testng.jar;%CLASSPATH% org.testng.TestNG -d test-outputs testng.xml
+java -classpath testng.jar;%CLASSPATH% org.testng.TestNG -d test-outputs test-outputs\testng-failed.xml
+
+
+
+TestNG Assertion
+-------------------
+In Selenium, Asserts are validations or checkpoints for an application. Assertions state confidently that application behaviour is working as expected. Asserts in Selenium validate the automated test cases that help testers understand if tests have passed or failed.
+
+
+Types of Assertions
+•Hard Assertions
+•Soft Assertions (Verify Method)
+
+
+Hard Assertions
+
+Hard Assert – stops execution after a fail and moves to the next annotation
+
+Hard Assertions are ones in which test execution is aborted if the test does not meet the assertion condition. The test case is marked as failed. In case of an assertion error, it will throw the “java.lang.AssertionError” exception.
+
+Let’s explore different types of hard assertions with examples.
+
+1..assertEquals() is a method that takes a minimum of 2 arguments and compares actual results with expected results. If both match, the assertion is passed, and the test case is marked as passed. assertEquals() can compare Strings, Integers, Doubles, and many more variables, as shown in the below syntax:
+
+a. public static void assertEquals(boolean actual, boolean expected) // It takes two boolean arguments. 
+b. public static void assertEquals(String actual, String expected) // It takes two string arguments. 
+c. public static void assertEquals(String actual, String expected, String message) // It takes three string arguments and checks that both are equal or not. In case both are not equal, this method fails the test with the given message.
+d. public static void assertEquals(java.util.Collection actual, java.util.Collection expected, java.lang.String message)
+
+2.assertNotEquals() is a method that does the opposite of the assertEquals() method. In this case, the method compares the actual and expected result. But if the assertion condition is met if the two are not identical. The test case is marked as passed if actual and expected results are not the same.
+
+3.assertTrue(): This Assertion verifies the Boolean value returned by the condition. If the Boolean value is true, then the assertion passes the test case.
+import org.testng.Assert; 
+import org.testng.annotations.Test; 
+public class AssertTrueExample 
+{ 
+@Test 
+public void compareNumeric() 
+{ 
+  Assert.assertTrue(5 > 2); 
+  System.out.println("5 is greater than 2"); 
+ } 
+@Test 
+public void compareString() 
+{ 
+   Assert.assertTrue("Java".equals("Java"), "Not matched"); // true 
+   Assert.assertTrue("Selenium".equals("Java"), "Not matched"); // false 
+ } 
+}
+
+Output: 
+       5 is greater than 2 
+       PASSED: compareNumeric 
+       FAILED: compareString java.lang.AssertionError: Not macthed expected [true] but found [false]
+
+4.assertFalse(): This method works the opposite of assertTrue(). The Assertion verifies the Boolean value returned by the condition. If the Boolean value is false, the assertion passes the test case.
+import org.testng.Assert; 
+import org.testng.annotations.Test; 
+public class AssertFalseExample 
+{ 
+@Test 
+public void compareNumeric() 
+{ 
+  Assert.assertFalse(5 > 2); // Here, condition is true. So, test case will be marked as failed and the next statement will not be executed. 
+  System.out.println("5 is greater than 2");
+ } 
+@Test 
+public void compareString() 
+{ 
+   Assert.assertFalse("Selenium" == "Java", "Matched"); // Here, condition is false. So, test case will be passed by assertion. 
+ } }
+Output: 
+       PASSED: compareString 
+       FAILED: compareNumeric java.lang.AssertionError: expected [false] but found [true]
+
+
+5.assertNull(): This method verifies if the expected output is null. If not, the value returned is false.
+import org.openqa.selenium.WebDriver; 
+import org.openqa.selenium.firefox.FirefoxDriver; 
+import org.testng.Assert; 
+import org.testng.annotations.Test; 
+
+public class AssertNullExample 
+{ 
+@Test 
+public void testCase() 
+{ 
+  WebDriver driver = new FirefoxDriver(); 
+  Assert.assertNull(driver); 
+  System.out.println("Test case executed successfully"); 
+ } 
+}
+Output: 
+       FAILED: testCase java.lang.AssertionError: expected [null] but found [FirefoxDriver: firefox on WINDOWS
+
+6.assertNotNull(): This method works opposite to the assertNull() method. The assertion condition is met when the method validates the expected output to be not null.
+import org.openqa.selenium.WebDriver; 
+import org.openqa.selenium.firefox.FirefoxDriver; 
+import org.testng.Assert; 
+import org.testng.annotations.Test; 
+public class AssertNotNullExample 
+{ 
+@Test 
+public void testcase() 
+{ 
+ WebDriver driver = new FirefoxDriver(); 
+ Assert.assertNotNull(driver); 
+ System.out.println("Test case executed successfully"); 
+ } 
+}
+Output: 
+        Test case executed successfully 
+        PASSED: testcase
+
+
+7. assertSame(): The assertSame() method is used to compare the address of objects. If the address of objects is the same then assertion is passed otherwise, TestNG throws an error AssertionError.
+import org.testng.Assert; 
+import org.testng.annotations.Test; 
+public class AssertSameExample 
+{ 
+@Test(priority = 0) 
+public void testCaseOne() 
+{ 
+   String str1 = "Hello"; 
+   String str2 = "Hello"; 
+  Assert.assertSame(str1, str2, "Contents are not Same"); 
+  System.out.println("Test case one passed successfully"); 
+} 
+@Test(priority = 1) 
+public void testCaseTwo() 
+{ 
+   String s1 = "Java"; 
+   String s2 = new String("Java"); 
+ 
+   Assert.assertEquals(s1, s2, "Contents are not same"); 
+   System.out.println("Test case two passed successfully"); 
+ } 
+@Test(priority = 2) 
+public void testCaseThree() 
+{ 
+   String s1 = "Java"; 
+   String s2 = new String("Java"); 
+ 
+   Assert.assertSame(s1, s2, "Address of both string objects are not same"); 
+   System.out.println("Test case three passed successfully"); 
+ } 
+}
+
+Output: 
+       Test case one passed successfully 
+       Test case two passed successfully 
+       PASSED: testCaseOne 
+       PASSED: testCaseTwo 
+       FAILED: testCaseThree java.lang.AssertionError: Address of both string objects are not same expected [Java] but found [Java]
+
+
+
+8.assertNotSame(): The assertNotSame() method is used to check that the addresses of objects are not the same. If both the addresses are the same then TestNG throws an AssertionError. The general syntax is as:
+public class AssertNotSameExample 
+{ 
+@Test(priority = 0) 
+public void testCaseOne() 
+{ 
+  String str1 = "Hello"; 
+  String str2 = "Hello"; 
+ 
+  Assert.assertNotSame(str1, str2, "Contents are not same"); 
+  System.out.println("Test case one passed successfully"); 
+} 
+@Test(priority = 1) 
+public void testCaseTwo() 
+{ 
+   String s1 = "Java"; 
+   String s2 = new String("Java"); Assert.assertNotSame(s1, s2, "Address of both string objects are not same"); 
+   System.out.println("Test case two passed successfully"); 
+ } 
+}
+
+Output: 
+       Test case two passed successfully 
+       PASSED: testCaseTwo 
+       FAILED: testCaseOne java.lang.AssertionError: Contents are not Same expected not same [Hello] but found [Hello]
+
+
+SoftAssertion in TestNG
+-------------------------
+Soft assertion is a type of assertion that continues with test execution even if the assertion condition is not met.
+
+In a hard assertion, when the assertion fails, it terminates or aborts the test. If the tester does not want to terminate the script, they cannot use hard assertions. 
+To overcome this, one can use soft assertions.
+
+When an assertion fails, SoftAssert doesn’t throw an exception but records the failure and continues with the next execution of statements.
+
+Soft assert requires the external import of the package import org.testng.asserts.SoftAssert;.
+An object of the SoftAssert runs the assert statements.
+The object should have a life within the same test method in which we declared it.
+object.assertAll() statement is required to see the exceptions; otherwise, the tester won't know what passed and what failed
+
+The general declaration for SoftAssert class is as follows:
+public class SoftAssert
+     extends Assertion
+
+SoftAssert Methods/Commands in Selenium
+In addition to methods inherited from Assertion class, SoftAssert class provides only two new methods. They are as follows:
+1. doAssert (protected method, we would not be using it)
+2. assertAll()
+
+
+As you can see in the coding, when the test case failed in softAssert, it did not throw any exception error and continue with execution of the next statement.
+But in the case of hardAssert, when the test case failed, it has thrown an AssertionError and did not execute the next statement. Look at the output of the program.
+
+
+1. assertAll(): The assertAll() method of softAssert class is used to know the failure record when assertion failed. This method cannot be used alone in the test case. It must be used as the last statement along with some other assert methods.
+
+
+MAVEN
+----------
+Maven is a Tool (software) used to handle dependency-management as automated ie jars, chain jars with version management should be taken care by maven tool. It is developed by Apache.
+
+Maven is a Repository server which contains jars(dependencies) only in well-arranged format (provider based, jar name based, version based).
+
+Example for Other Tools – ANT , Gradle , Npm , Yarn
+
+Dependency Management :
+It is a concept of maintain jars of a project, maintain child jars and parent jars (dependency-chain), maintain proper version of all jars (dependency-version)
+
+Library : It is collection of Jars.
+
+Every jar (depedency) contains 3 details mainly. Those are groupId (jar provider/company name) artifactId (jar name) & version (jar version). Maven maintains all jars as Library also called as Maven Library.
+
+Maven Repository URL - https://mvnrepository.com/
+
+Every jar(dependency)should contain,
+groupId ( providerName)
+artifactId (jar name)
+version (jar version).
+Format looks as,
+<dependency>
+<groupId> ___ </groupId>
+<artifactId>___ </artifactId>
+<version> ____</version>
+</dependency>
+
+
+For any Maven project 4 basic folder are provided. Those are,
+• src/main/java
+• src/main/resource
+• src/test/java
+• src/test/resource
+
+Maven Lifecycle: Below is a representation of the default Maven lifecycle and its 8 steps: Validate, Compile, Test, Package, Integration test, Verify, Install, and Deploy.
+
+Maven commands
+----------------
+mvn clean -  cleans up artifacts created by prior builds
+mvn install - install the package into the local repository, for use as a dependency in other projects locally
+mvn test - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+mvn verify - run any checks to verify the package is valid and meets quality criteria
+mvn compile - compile the source code of the project
+mvn package - take the compiled code and package it in its distributable format, such as a JAR
+
+From command line
+mvn -version - it will show version of mvn 
+we can use all above mentioned commands in command line 
+
+we can combine the commands
+mvn clean install 
+mvn clean test
+mvn clean build 
+
+Maven surefire plugin usage 
+To run the testng.xml file - configure the testng.xml under surefire plugin like below
+ <plugin>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.22.1</version>
+<configuration>
+<!-- Configuring the test suites to execute -->
+<suiteXmlFiles>
+<suiteXmlFile>D:\Training\Selenium\testng.xml</suiteXmlFile>  // use this line file path of testing XML
+<suiteXmlFile>testng.xml</suiteXmlFile> //use this line for testing.xml inside project 
+</suiteXmlFiles>
+</configuration>
+</plugin>
+<plugin>
+
+Run below command in command line to run the testing.xml using pom.xml
+mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
+
+<suiteXmlFile>${testng.xml}</suiteXmlFile>
+
+GIT 
+----
+Git - Code Repository tool(Version Management) and Source Code Management Tools
+
+Open source tool as well paid version also there 
+
+•	Git 
+•	Bitbucket
+•	CVS
+•	SVN - Apache Subversion
+•	Mercurial
+•	TFS - team foundation server - Azure Devops- from Microsoft 
+•	IBM Rational ClearCase
+
+GIT and GITHub 
+1.Git is distributed version control tool used for source code management
+2.Its an open source software tool 
+3.GIT works with large and small projects and easily integrated with IDE and Editors
+
+Git - Local Repository 
+GitHub - Remote repository 
+
+Local Git setup 
+	How to setup git?
+1Goto to Git website - https://git-scm.com/
+3.Download the git.exe file and install it in your system 
+4.check for Git GUI and Git Bash option in your system menu
+
+Setup in Eclipse 
+1.	Install for Eclipse 
+2.	Open eclipse 
+3.	Goto Help Menu – Select Eclipse MarketPlace – search for GIT 
+4.	And install to eclipse 
+5.	Click on Window Menu – Select Perspective – Click on Open Perspective – Select Other – Select Git and Click on open – Git Explorer visible in Eclipse 
+
+
+Remote setup 
+1.	Goto to github website - https://github.com/
+2.	create new account and login with created account 
+3.	Github home page is loaded
+4.	Create a new respositary by clicking on new button (Private or Public repo)
+5.	clone your respository into git hub
+6.	create new folder in your system /use any folder
+7.	open the gitbash or windows command prompt 
+8.	goto to repo folder in command prompt
+Execute below commands for private repo
+1.	git config --global user.email "you@example.com" // email used for login into github
+2.	git config --global user.name "Your Name"
+public repo - below command is enough. 
+git clone clone url - get it from your git hub 
+
+
+Branching 
+------------
+Local/Development branch - development of code 
+Main/Master branch - which in repository branch where all the codes moved/checked in here 
+
+
+Git Commands
+------------
+1..git init reponame  - command creates a new Git repository
+2..git add . - it will add all the files into repo (git add [filename])
+3.git status - To check the current branch and current updates and This command lists all the files that have to be committed.
+4.git commit -m  "message" -  Commting the chnages to remote repo
+5.git push  -  This command sends the committed changes of master branch to your remote repository.
+6.git pull - This command fetches and merges changes on the remote server to your working directory.
+7.git checkout branchname  - This command is used to switch from one branch to another.
+8.git config --global user.email "you@example.com"
+9.git config --global user.name "Your Name"
+10.git log - This command is used to list the version history for the current branch.
+11.git stash - This command temporarily stores all the modified tracked files.
+12.git merge <Branch Name> or git merge <commitid> - This command merges the specified branch’s history into the current branch. Always you should be Merge branch before merging any branch
+13. .git clone - This command is used to obtain a repository from an existing URL. (git clone UrlName)
+14.git push -u origin branchname – To push the changes to any particular branch if more than one branch exists
+15.git branch branchname – to create the new branch in repo
+16.git push --set-upstream origin <branch name>  - Merging Local Branch to Remote Repository
+17.git branch -d branchname – to delete the branch in the local repository
+18.git push origin -- delete branchname  - to delete the branch the remote repository(Github)
+19.touch filename – touch filename.java – to create the new file in repo
+20.vi filename - to edit the file in git bash (Press I to insert , after entering values , press ESC Key , :wq , press enter to save)
+21git mergetool - used to resolve the merge conflict
+22git rebase --continue  - to accept the merge conflict changes
+23.git clean - command operates on untracked files. Untracked files are files that have been created within your repo's working directory but have not yet been added to the repository's
+24.git revert -  command is used for undoing changes to a repository's commit history.
+25.git reset - This command unstages the file, but it preserves the file contents.
+
+
+How to import the project from Git repository and import to eclispe
+----------------------------------------------------------------
+1.Create the folder in your local drive
+2.Goto command prompt and goto inside the created folder 
+3.git clone "clone url"
+4.if your not in the checked in branch - change branch using git checkout branchname
+5.Goto Eclipse - Browser the project directory and finish the import 
+6.Project will available in Project explorer of Eclipse 
+
+How to import the Maven project from Git repository and import to eclispe
+------------------------------------------------------------------------------------------------
+1.Create the folder in your local drive
+2.Goto command prompt and goto inside the created folder 
+3.Open the git bash inside folder  - git clone "clone url"
+4.if your not in the checked in branch - change branch using git checkout branchname
+5.Browser the project directory and finish the import
+
+How to share eclipse project into GitHub - Remote repository 
+-------------------------------------------------------
+1.Create the new remote repository - GitHub (You can repo name as your project name only)
+2.Copy the Repository - URL 
+3.Goto Eclipse - Your project - Right click on project - Click On Team Menu - Click on Share project
+4.At Config Git Respiratory Dialog - Select Use/Create Repository in parent folder checkbox 
+5.Select the checkbox project Workspace which your moving to GitHub 
+6.Click on Create Repository and .git files added and click on finish
+7.You can see now [project name master] is added to your project in eclipse 
+8.Now push the whole project into GitHub - Repository - Right click on project - Click On Team
+9.You can see the git commands enabled for your project - Click on Commit 
+10.Git console is opened - with all upstaged project files and enter commit message
+11.Click on commit and push - goto and check you remote repository for project is seen is github 
+12.if the error dialog is displayed - close it                
+13.click on Push Head button at git console and Destination git repository dialog opened
+14.check all the configuration and enter your GitHub login credentials, Click on Preview 
+15.click on Push
+
+
+Automation Project flow
+------------------------
+Create a Maven Porject with folder structure
+Add dependencies using pom.xml
+add your code - automation code
+Run the pom for test run
+setup Git and Github
+commit the code changes to branch(Github)
+Setup Jenkings and configure jenkins job
+Run the Job for your automation tests
+
+
+
+
+

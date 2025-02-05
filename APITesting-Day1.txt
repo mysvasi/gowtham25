@@ -1,0 +1,375 @@
+Manual testing we do testing for 
+Web Application
+Mobile Application
+Desktop application
+cloud application 
+Database 
+API Testing 
+
+Application programming interface 
+
+Define API ?
+API stands for the Application Programming Interface, they are basically a collection of functions and procedures which allows us to communicate two application or library.
+In one line, API is its an interface between different software programs or service.
+It is a system that enables communication between different software/Application
+
+
+Types API
+Public APIs (OPEN APIs) , Private APIs, Composite APIs, and Partner APIs
+
+1.Open APIs help external users to access data and services.
+It is also called public APIs which are available to any other users.
+
+2.Private APIs(Internal APIs)
+only an internal system exposes this type of API
+
+3. Composite APIs
+It is a type of API that combines different data and services.
+The main reason to use Composites APIs is to improve the performance and speed up the execution process and improve the performance of the listeners in the web interfaces.
+
+4. Partner APIs
+It is a type of API in which a developer needs specific rights or licenses in order to access.
+
+Examples
+1. Weather Snippets
+2. Login
+In this functionality, APIs are widely used to log in via Google, Linked In, Git Hub, and Twitter and allow users to access the log-in portal by using the API interface.
+
+Difference between the API and Web services
+Web service is a collection of open-source protocols and standards used for exchanging data between systems or applications.
+
+API is a software interface that allows two applications to interact with each other without any user involvement. 
+
+Web services is used for Rest, SOAP and XML RPC for communication
+
+API is used for any style of communication.
+
+Web Service supports only HTTP protocol.
+
+API supports HTTP/HTTPS protocol.
+
+Web Service supports XML. 
+
+API supports XML and JSON /Text/GrahpGL
+
+All web services are APIs but all APIs are not web services
+
+https://excalidraw.com/#json=nRDuSCfVN7Q52JVg7mNgZ,drGZPnfwYO5wYG7557QS_g
+
+Day2 - 29/10/2024
+-------------------------------------------
+HTTP/HTTPS
+
+URI and URL 
+
+What is URI ?
+Uniform Resource Identifier (URI) is a sequence of characters that distinguishes one resource from another.
+
+There are two types of URIs: URNs and URLs.
+ Uniform Resource Name (URN) is a persistent and location-independent identifier
+ Uniform Resource Locator (URL) is a specific type of identifier that not only identifies the resource but tells you how to access it or where it’s located.
+
+The key difference between URIs and URLs is that URIs are identifiers, whereas URLs are locators. In other words, a URI simply identifies the resource. It does not describe or imply how to locate the resource. A URL does.
+
+
+Day 3 - 30-10-2024
+HTTP Methods 
+----------------------
+GET, POST, PUT, PATCH, and DELETE
+
+1.GET: GET request is used to read/retrieve data from a web server. GET returns an HTTP status code of 200 (OK) if the data is successfully retrieved from the server.
+
+2.POST: POST request is used to send data (file, form data, etc.)or create the data to the server. On successful creation, it returns an HTTP status code of 201.
+
+3.PUT :A PUT request is used to modify/update the data on the server. It replaces the entire content at a particular location with data that is passed in the body payload(Input).
+If there are no resources/data that match the request, it will generate one. 
+
+4.PATCH: Like the PUT method, PATCH is also used to send data to update an ‘existing record’ on the server. 
+
+But the important difference between PUT and PATCH is that PATCH only applies partial modifications to the record instead of replacing the whole record.
+
+5. DELETE: The DELETE method is used to delete record(s) from the server.
+
+6.Options  - Returns available HTTP Methods and other options.
+
+
+What is Authentication and its types lets understand it...
+What is Authentication?
+Authentication is a process of presenting your credentials like username, password or another secret key to the system and the system to validate your credentials or you. 
+
+In the API terms Authentication is used to protect the content over web mean only a valid user with valid credentials can access that API endpoint. These credentials tell the system about who you are. Which enables the system to ensure and confirms a user’s identity. Here system can be anything, it can be a computer, phone, bank, or any physical office premises.
+
+Basic authentication -String is encoded with Base64.
+HTTP basic authentication is the most rudimentary way to implement API authentication. It involves sending credentials as user/password pairs in an Authorization header field, where the credentials are encoded using Base64. However, these credentials are not hashed or encrypted, which makes this authentication mechanism insecure unless it is used in conjunction with HTTPS.
+
+API key authentication
+An API key is a unique identifier that an API provider issues to registered users in order to control usage and monitor access. The API key must be sent with every request—either in the query string, as a request header, or as a cookie. Like HTTP basic authentication, API key authentication must be used with HTTPS to ensure the API key remains secure.
+
+Digest Authentication - Same as Basic Authentication but Authentication is performed by transmitting the password in an ENCRYPTED form.(With Some Salt etc)
+
+OAuth Authentication - Authentication protocol that allows you to approve one application interacting with another on your behalf without giving away your password.
+
+Bearer/Access Token Authentication - The name “Bearer authentication” can be understood as “give access to the bearer of this token.” The bearer token is a cryptic string, usually generated by the server in response to a login request. The client must send this token in the Authorization header when making requests to protected resources/API endpoint :
+
+AWS Signature - used for cloud hosted API endpoint to access the resources 
+
+How to Test an API ( API Testing)?
+API Testing can be done manually or using a Tools. It is always recommended to use certain tools.
+
+API testing is a software testing practice that tests the APIs directly — from their functionality, reliability, performance, to security. Part of integration testing, API testing effectively validates the logic of the build architecture within a short amount of time.
+
+Applications frequently have three layers: a data layer, a service layer -- the API layer --  and a presentation layer -- the user interface (UI) layer. The business logic of the application guides to how users can interact with the services, functions and data held  within the app is in the API layer. API testing focuses on analyzing the business logic as  well as the security of the application and data responses. An API test is generally performed by making requests to one or more API endpoints and comparing the response  with expected results.
+
+
+
+Day 4 - 04-11-2024
+-------------------
+Benefits of API Testing
+Earlier Testing:
+With API testing, once the logic is designed, tests can be built to validate the correctness in responses and data. We don't  have to wait for various teams to finish their work or for full applications to be built - test cases are isolated and ready to built immediately.
+
+Easier Test Maintenance:
+UIs are constantly changing and moving around based on how they are accessed - browsers, devices, screen orientation, etc.  This creates a nightmare scenario where tests are being constantly rewritten to keep up with the actual code in production.
+API changes are much more controlled and infrequent - often API definitions files like OpenAPI Spec can help make  refactoring tests only a seconds of work.
+
+Faster Time To Resolution:
+When API tests fail, we know exactly where our system broke and where the defect can be found. This helps reduce time triaging/Defect Review meeting bugs between builds, integrations, and even different team-members.Speed and Coverage of Testing:
+300 UI tests may take 30 hours to run. 300 API tests could be run in 3 minutes. That means user will find more bugs in less  time, while also being about to fix them immediately.
+
+GUI-independent:
+API testing can be performed in the app prior to GUI testing. Early testing means early feedback and better team productivity.  The app's core functionalities can be tested to expose small errors and to evaluate the build's strengths.
+
+Improved test coverage:
+Most API/web services have specifications, allowing you to create automated tests with high coverage — including functional testing and non-functional testing
+
+
+What is REST API?
+As REST is an acronym for REpresentational State Transfer, statelessness is key. An API can be REST if it follows the below constraints.
+
+The REST architectural style describes six constraints. These constraints, put on the architecture, were initially communicated by Roy Fielding in his doctoral dissertation and defines the basis of RESTful-style.
+
+1. Uniform Interface
+2. Stateless
+3. Cacheable
+4. Client-Server
+5. Layered System
+6. Code on Demand
+
+If any API fulfil all the constraints then we can say it REST API.
+
+What to Test in API Testing?
+•Validate the keys with the Min. and Max range of APIs (e.g maximum and minimum length)
+•Have a Testcase to do XML,JSON Schema validation.
+•API Integration testing
+•Keys verification. If we have JSON, XML apis we should verify it's that all the keys are coming.
+•Verify that how the APIs error codes handled.
+
+API Testing tools
+•Runscope.com
+•Postman CI/CD -A desktop app used for verifying and automating API testing.
+•Katalon using CI/CD
+•SoapUI CI/CD
+•Rest Assured CI/CD -An open source, Java-specific language that facilitates and eases the testing of REST APIs.
+•Insomnia
+•Swagger - An open-source tool that creates a webpage that documents APIs used.
+
+
+How the developer put the information about APIs?****
+1.QA needs to ask for API end point\Request\Response to for testing with HTTP Methods
+2.There is tool called Swagger - swagger documentation where all the API information is available 
+3.To find the API endpoint in browser - open the web application in Browser - go to page under test and click on developer tools - Network tab , Search for API 
+
+API for practice
+https://reqres.in/api/users?page=2
+Swagger
+https://petstore.swagger.io/#/
+
+
+How to approach API testing?
+An API testing process should begin with a clearly defined scope of the program as well as a full understanding of how the API is supposed to work. Some questions that testers should consider include:
+What endpoints are available for testing?
+What response codes are expected for successful requests?
+What response codes are expected for unsuccessful requests?
+Which error message is expected to appear in the body of an unsuccessful request?
+
+Once the test cases have been specified, testers can perform them and compare the expected results to the actual results. The test should analyse responses that include:
+•	reply time,
+•	data quality,
+•	confirmation of authorization,
+•	HTTP status code and
+•	error codes.
+
+
+Types of API Testing
+
+API testing typically involves the following practices:
+Unit testing - Testing the functionality of individual operations.
+
+Validation Testing - It occurs among the final steps and plays an essential role in the development process. It verifies the aspects of product, behavior, and efficiency. In other words, validation testing can be seen as an  assurance of the correct development.
+
+UI testing - It is defined as a test of the user interface for the API and other integral parts. UI testing focuses  more on the interface which ties into the API rather than the API testing itself. Although UI testing is not a specific test of API in terms of codebase, this technique still provides an overview of the health, usability, and  efficiency of the app’s front and back ends.
+
+Functional testing - Testing the functionality of broader scenarios, often using unit tests as building blocks for end-to-end tests. Includes test case definition, execution, validation, and regression testing.
+
+Load testing - Validating functionality and performance under load, often by reusing functional test cases.
+Runtime error detection - Monitoring an application the execution of automated or manual tests to expose problems such as race conditions, exceptions, and resource leaks.
+
+Security testing - Includes penetration testing and fuzz testing as well as validating authentication, encryption,  and access control.
+
+Web UI testing - Performed as part of end-to-end integration tests that also cover APIs, enables teams to validate GUI items in the context of the larger transaction.
+Interoperability testing - (SOAP only) Checking conformance to Web Services Interoperability profiles.
+
+Penetration testing - Considered the second test in the auditing process. In this type, users with limited API knowledge will try to assess the threat vector from an outside perspective, which is about functions, resources, processes, or aim to the entire API and its components.
+
+Fuzz-testing - massive amounts of purely random data, sometimes referred to as "noise" or "fuzz", is forcibly input into the system in order to attempt a forced crash, overflow, or other negative behavior. This is done to test the API at its absolute limits and serves somewhat as a "worst case scenario".	
+
+
+Types of Bugs/Defects that API testing detects.
+•	Fails to handle error conditions gracefully
+•	Unused flags
+•	Missing or duplicate functionality
+•	Reliability Issues. Difficulty in connecting and getting a response from API.
+•	Security Issues
+•	Multi-threading issues
+•	Performance Issues. API response time is very high.
+•	Improper errors/warning to a caller
+•	Incorrect handling of valid argument values
+•	Response Data is not structured correctly (JSON or XML)
+
+
+Challenges of API Testing
+•	Main challenges in Web API testing is Parameter Combination, Parameter Selection, and Call Sequencing
+•	There is no GUI available to test the application which makes difficult to give input values.
+•	Validating and verifying the output in a different system is little difficult for testers
+•	Parameters selection and categorization is required to be known to the testers.
+•	Exception/Error handling function needs to be tested.
+
+
+Day 5 - 05-11-2024
+-------------------
+HTTP Status Codes
+What are HTTP status codes?
+HTTP status codes are three-digit codes that indicate the outcome of an API request. They are included in the API’s response to the API client, and they include important information that helps the client know how to proceed.
+
+What are the different types of HTTP status codes?
+HTTP status codes are grouped into five classes, each beginning with a number that represents the type of response. The classes are:
+
+1xx informational responses 
+•100 Continue: This status code indicates that the initial part of the request has been received and the server would like the client to send the rest of it.
+•101 Switching Protocols: This status code is used to inform the client that the server is changing the protocol that is being used in the connection.
+•102 Processing: This status code is an interim response that indicates the server is still processing the request.
+•103 Early Hints - This status code is intended to be used to allow the user agent to preload resources, while the server prepares a response. 
+
+2xx success responses
+•200 OK: This status code indicates that the request was successful, and the server returned the requested data.
+•201 Created: This status code means that the request was successful, and the server created a new resource.
+•202 Accepted :The request has been accepted for processing, but the processing has not been completed
+•203 Non-Authoritative Information : The returned metainformation in the entity-header is not the definitive set as available from the origin server, but is gathered from a local or a third-party copy. 
+•204 No Content: This status code indicates that the request was successful, but the server did not return any data.
+•205 Reset Content :The server has fulfilled the request and the user agent SHOULD reset the document view which caused the request to be sent.
+•206 Partial Content : The server has fulfilled the partial GET request for the resource
+
+3xx redirection responses
+•300 Multiple Choices - This status code indicates that the request has multiple possible responses and the user/user agent should choose one.
+•301 Moved Permanently - This status code indicates that the requested resource has been permanently moved to a new URL
+•302 Found - previously known as “Moved temporarily”,  This status code indicates that the URI of the request has been changed temporarily.
+•303 See Other: This status code indicates that the response is available at a different URL, and the client should perform a GET request to that URL to retrieve the resource.
+•304 Not Modified - If the client has performed a conditional GET request and access is allowed, but the document has not been modified, the server SHOULD respond with this status code.
+•306 (Unused) - The 306 status code was used in a previous version of the specification, is no longer used, and the code is reserved.
+•307 Temporary Redirect - This status code gets sent by the server in order to direct the client to the requested resource at another URI The request method, however, must not be changed.
+
+4xx client error responses
+•400 Bad Request: This status code indicates that the request was malformed or invalid.
+•401 Unauthorized: This status code lets the client know that it is not authorized to access the requested resource.
+•402 Payment Required (Experimental) Reserved for future use. It is aimed for using in the digital payment systems.
+•403 Forbidden: This status code communicates that the client is authenticated but not authorized to access the requested resource.
+•404 Not Found: This status code indicates that the requested resource was not found on the server.
+
+5xx server error responses
+•500 Internal Server Error: This generic error code indicates the server encountered an unexpected condition that prevented it from fulfilling the request.
+•501 Not Implemented  - The HTTP method is not supported by the server and cannot be handled.
+•502 Bad Gateway: This status code indicates that a server acting as a gateway or proxy received an invalid response from an upstream server.
+•503 Service Unavailable: This status code is returned when the server is temporarily unable to handle the request. It’s often seen during periods of increased traffic or when the server is undergoing maintenance.
+•504 Gateway Timeout -   This status code indicates that the server acting as a gateway could not get a response time.
+
+
+Day 6 - 05-11-2024
+API Testing using POSTMAN.
+
+What is Postman?
+It is an API Testing tool used by developers and Testers to perform API Testing with lots of different features.
+
+like Global variables, mock request, Environment, and monitoring of APIs.
+
+Postman is a scalable API testing tool that quickly integrates into CI/CD pipeline. It started in 2012 as a side project by Abhinav Asthana to simplify API workflow in testing and development. API stands for Application Programming Interface which allows software applications to communicate with each other via API calls.
+
+Why Use Postman?
+1.Accessibility 
+2.Use of Collections
+3.Collaboration 
+4.Creating Environments
+5.Creation of Tests
+6.Automation Testing
+7.Debugging 
+8.Continuous Integration
+
+Download Postman - https://www.postman.com
+
+Dev
+SIT/QC/QA
+UAT
+Stage
+Production
+
+Day 7 - 06-11-2024
+API Post man tool executions
+
+Day 8 - 07-11-2024
+
+Authentications examples
+
+1.Basic auth
+2.Digest
+3.Hawk
+4.Oauth1.0
+
+
+Day 7 - 08-11-2024
+Import and Export of collections
+
+Curl URL - Import
+
+Parameterization
+Data Parameterization is one of the most useful features of Postman. Instead of creating the same requests with different data, you can use variables with parameters. These data can be from a data file or an environment variable. Parameterization helps to avoid repetition of the same tests and iterations can be used for automation testing.
+
+Parameters are created through the use of double curly brackets: {{sample}}. Let’s look at an example of using parameters in our previous request:
+
+Importance of parameterization
+1.Time saving
+2.Easily run the APIs with different environments
+https://qc1-postman.com/v1/?order
+https://uat-postman.com/v1/?order
+https://postman.com/v1/?order
+https://stage-postman.com/v1/?order
+3.Easily maintain the testdata/queryparameters/variable
+
+Day 8 - 11-11-2024
+Install node.js from node website
+Run command line
+Intsall npm 
+$ npm install -g newman (- install newman)
+What is API rate limiting?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
